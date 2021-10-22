@@ -1,0 +1,35 @@
+﻿<Window x:Class="Software_Projekt.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Software_Projekt"
+        mc:Ignorable="d"
+        Title="Statistik-Trainer" Height="450" Width="800" MinHeight="400" MinWidth="700" Background="Gray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu IsMainMenu="True" Grid.Row="0" Grid.ColumnSpan="2">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="_Öffnen" Click="OnReadFile" InputGestureText="Strg+N"/>
+                <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock  Text="Statistik-Tainer" FontSize="50" HorizontalAlignment="Center" Margin="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Werte einlesen" Click="OnReadFile"/>
+            <TextBox x:Name="AnalysePath" Margin="5"/>
+            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Analysieren" Click="OnAnalyseFile"/>
+            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Kennzahlen" Click="OnOpenIndicators"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="Software_Projekt.Indicators"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Software_Projekt"
+        xmlns:vm="clr-namespace:Software_Projekt.ViewModel"
+        mc:Ignorable="d"
+        Title="Indicators" Height="700" Width="1200" MinWidth="950">
+
+    <Window.DataContext>
+        <vm:ViewModel/>
+    </Window.DataContext>
+    
+    <Window.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize"  Value="24"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Menu IsMainMenu="True" Grid.Row="0" Grid.ColumnSpan="3">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="_Öffnen" Click="OnOpenMainwindow" InputGestureText="Strg+N"/>
+                <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
+            </MenuItem>
+        </Menu>
+        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Deskriptive Statistik" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Wahrscheinlichkeitsrechnung" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Induktive Statistik" Grid.Row="1" Grid.Column="2"/>
+        <ListBox  Grid.Row="2" ItemsSource="{Binding Path=Indicators}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{Binding Path=Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Grid.Row="2" Grid.Column="1">
+            <!-- Liste mit einzelnen Kennzahlen -->
+        </ListBox>
+        <ListBox Grid.Row="2" Grid.Column="2">
+            <!-- Liste mit einzelnen Kennzahlen -->
+        </ListBox>
+    </Grid>
+</Window>
