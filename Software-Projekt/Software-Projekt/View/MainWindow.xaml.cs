@@ -41,7 +41,9 @@ namespace Software_Projekt.View
 
         private void OnAnalyseFile(object sender, RoutedEventArgs e)
         {
-
+            var Analyse_Window = new AnalyseWindow();
+            Analyse_Window.Show();
+            this.Close();
         }
 
         private void OnOpenIndicators(object sender, RoutedEventArgs e)
