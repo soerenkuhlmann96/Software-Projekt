@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\Sören\\source\\repos\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj": {}
+    "D:\\GItHub\\Software-Projekt\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj": {}
   },
   "projects": {
-    "D:\\Users\\Sören\\source\\repos\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj": {
+    "D:\\GItHub\\Software-Projekt\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Sören\\source\\repos\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj",
+        "projectUniqueName": "D:\\GItHub\\Software-Projekt\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj",
         "projectName": "Software-Projekt",
-        "projectPath": "D:\\Users\\Sören\\source\\repos\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj",
+        "projectPath": "D:\\GItHub\\Software-Projekt\\Software-Projekt\\Software-Projekt\\Software-Projekt.csproj",
         "packagesPath": "C:\\Users\\Sören\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Sören\\source\\repos\\Software-Projekt\\Software-Projekt\\obj\\",
+        "outputPath": "D:\\GItHub\\Software-Projekt\\Software-Projekt\\Software-Projekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sören\\AppData\\Roaming\\NuGet\\NuGet.Config",
