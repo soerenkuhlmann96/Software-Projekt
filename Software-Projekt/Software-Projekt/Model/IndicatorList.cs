@@ -13,7 +13,7 @@ namespace Software_Projekt
         {
             string line;
             string[] columns;
-            var reader = new StreamReader("D:/Users/Sören/source/repos/Software-Projekt/Software-Projekt/Ressourcen/Indicators.csv");
+            var reader = new StreamReader("/Ressourcen/Indicators.csv");
             while ((line = reader.ReadLine()) != null)
             {
                 columns = line.Split(';');
