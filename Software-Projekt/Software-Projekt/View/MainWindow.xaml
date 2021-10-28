@@ -27,9 +27,10 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Werte einlesen" Click="OnReadFile"/>
-            <TextBox x:Name="AnalysePath" Margin="5"/>
+            <TextBox x:Name="AnalysePath" Margin="5" IsReadOnly="True"/>
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Analysieren" Click="OnAnalyseFile"/>
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Kennzahlen" Click="OnOpenIndicators"/>
+            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content=""/>
         </StackPanel>
     </Grid>
 </Window>

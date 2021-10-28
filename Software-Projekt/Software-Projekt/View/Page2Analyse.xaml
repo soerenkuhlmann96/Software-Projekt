@@ -18,7 +18,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Menu IsMainMenu="True" Grid.Row="0" Grid.ColumnSpan="3">
             <MenuItem Header="_Datei">
@@ -26,5 +26,8 @@
                 <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
             </MenuItem>
         </Menu>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Button Content="_Weiter" Click="OnOpenNextPage" HorizontalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -27,5 +27,11 @@ namespace Software_Projekt.View
         {
 
         }
+
+        private void OnOpenNextPage(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("/View/Page3Analyse.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
+        }
     }
 }

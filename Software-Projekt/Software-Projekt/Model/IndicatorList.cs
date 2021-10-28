@@ -13,7 +13,11 @@ namespace Software_Projekt
         {
             string line;
             string[] columns;
-            var reader = new StreamReader("/Ressourcen/Indicators.csv");
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            projectDirectory += "/Ressourcen/Indicators.csv";
+            //string CSV_FilePath =  + "Ressourcen/Indicators.csv";
+            var reader = new StreamReader(projectDirectory);
             while ((line = reader.ReadLine()) != null)
             {
                 columns = line.Split(';');
