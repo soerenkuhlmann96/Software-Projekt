@@ -25,6 +25,9 @@
                 <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
             </MenuItem>
         </Menu>
+        <StackPanel Grid.Row="1">
+            <Label Content="Datenreihe 1"/>
+        </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1">
             <Button Content="_Weiter" Click="OnOpenNextPage" HorizontalAlignment="Center"/>
         </StackPanel>
