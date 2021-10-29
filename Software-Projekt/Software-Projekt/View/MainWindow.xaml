@@ -23,7 +23,7 @@
             </MenuItem>
         </Menu>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
-            <TextBlock  Text="Statistik-Tainer" FontSize="50" HorizontalAlignment="Center" Margin="20"/>
+            <TextBlock  Text="Statistik-Trainer" FontSize="50" HorizontalAlignment="Center" Margin="20"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Werte einlesen" Click="OnReadFile"/>
