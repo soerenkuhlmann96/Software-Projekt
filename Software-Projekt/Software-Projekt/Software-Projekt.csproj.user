@@ -19,12 +19,6 @@
     <Compile Update="View\Page2Analyse.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Page3Analyse.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\Page4Analyse.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\AnalyseWindow.xaml">
@@ -40,12 +34,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Page2Analyse.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Page3Analyse.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Page4Analyse.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

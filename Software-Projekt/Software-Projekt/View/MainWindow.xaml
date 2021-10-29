@@ -19,7 +19,7 @@
         <Menu IsMainMenu="True" Grid.Row="0" Grid.ColumnSpan="2">
             <MenuItem Header="_Datei">
                 <MenuItem Header="_Öffnen" Click="OnReadFile" InputGestureText="Strg+N"/>
-                <MenuItem Header="_Beenden" InputGestureText="alt+f4" Click="OnClose"/>
+                <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
             </MenuItem>
         </Menu>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2">

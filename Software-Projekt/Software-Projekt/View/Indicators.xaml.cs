@@ -27,10 +27,5 @@ namespace Software_Projekt
         {
 
         }
-
-        private void OnClose(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
     }
 }
