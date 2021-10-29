@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Software_Projekt"
         xmlns:vm="clr-namespace:Software_Projekt.ViewModel"
         mc:Ignorable="d"
-        Title="Indicators" Height="700" Width="1200" MinWidth="950">
+        Title="Indicators" Height="700" Width="1200" MinWidth="1050" MinHeight="600">
 
     <Window.DataContext>
         <vm:ViewModel/>
@@ -27,9 +27,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" MinWidth="350"/>
+            <ColumnDefinition Width="*" MinWidth="350"/>
+            <ColumnDefinition Width="*" MinWidth="350"/>
         </Grid.ColumnDefinitions>
         <Menu IsMainMenu="True" Grid.Row="0" Grid.ColumnSpan="3">
             <MenuItem Header="_Datei">
@@ -40,7 +40,7 @@
         <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Deskriptive Statistik" Grid.Row="1"/>
         <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Wahrscheinlichkeitsrechnung" Grid.Row="1" Grid.Column="1"/>
         <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Induktive Statistik" Grid.Row="1" Grid.Column="2"/>
-        <ListBox  Grid.Row="2" ItemsSource="{Binding Path=Indicators}">
+        <ListBox  Grid.Row="2" ItemsSource="{Binding Path=Indicators}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Button Content="{Binding Path=Name}"/>

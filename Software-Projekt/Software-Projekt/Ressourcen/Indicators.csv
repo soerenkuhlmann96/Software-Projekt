@@ -1,4 +1,35 @@
-﻿Absolute Häufigkeitsverteilung;x+1;Text
+﻿Absolute Häufigkeitsverteilung;x+1;Text1
 kumulierte absolute Häufigkeitsverteilung;x+2;Text2
 Relative Häufigkeitsverteilung;x+3;Text3
 kumulierte relative Häufigkeitsverteilung ;x+4;Text4
+Lagemaße;x+5;Text5
+Median;x+6;Text6
+Quantil;x+7;Text7
+Arithmetisches Mittel;x+8;Text8
+Geometrisches Mittel;x+9;Text9
+Spannweite;x+10;Text10
+Quantilsabstand;x+11;Text11
+Varianz;x+12;Text12
+Standardabweichung;x+13;Text13
+Variationskoeffizient;x+14;Text14
+Merkmalssumme;x+15;Text15
+Anteilswerte;x+16;Text16
+Absolutes Konzentrationsmaß;x+17;Text17
+Lorenzkurve;x+18;Text18
+Gini Maß;x+19;Text19
+Randverteilung;x+20;Text20
+Kontingenztabelle;x+21;Text21
+Chi-Quadrat;x+22;Text22
+Kontingenzmaß nach Cramér;x+23;Text23
+Kovarianz;x+24;Text24
+Pearson’scher Korrelationskoeffizient;x+25;Text25
+Rangzahl;x+26;Text26
+Spearman’scher Rangkorrelationskoeffizient;x+27;Text27
+Einfache Lineare Regresion;x+28;Text28
+Güte der Regression;x+29;Text29
+Bestimmtheitsmaß;x+30;Text30
+Wertindex;x+31;Text31
+Preisindex nach Laspeyres;x+32;Text32
+Preisindex nach Paasche;x+33;Text33
+Mengenindex nach Laspeyres;x+34;Text34
+Mengenindex nach Paasche;x+35;Text35

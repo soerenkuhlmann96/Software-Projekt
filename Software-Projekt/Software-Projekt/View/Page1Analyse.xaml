@@ -8,6 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1Analyse">
 <!-- Werte beschreiben durch User Input -->
+<!-- Skalentyp definieren durch User Input-->
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -27,6 +29,11 @@
         </Menu>
         <StackPanel Grid.Row="1">
             <Label Content="Datenreihe 1"/>
+            <CheckBox/>
+            <CheckBox/>
+            <CheckBox/>
+            <CheckBox/>
+            <CheckBox/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1">
             <Button Content="_Weiter" Click="OnOpenNextPage" HorizontalAlignment="Center"/>
