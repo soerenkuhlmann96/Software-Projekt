@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Software_Projekt.View
 {
@@ -30,8 +21,34 @@ namespace Software_Projekt.View
 
         private void OnOpenNextPage(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("/View/Page2Analyse.xaml", UriKind.Relative);
-            this.NavigationService.Navigate(uri);
+            //überprüfung ob Angaben gemacht wurden
+            if (IndicatorCombobox.SelectedIndex > -1 && ScaleTypeCombobox.SelectedIndex > -1)
+            {
+                //Erstellen der Liste mit möglichen Kennzahlen
+
+
+
+                //Nächste Seite anzeigen
+                Uri uri = new Uri("/View/Page2Analyse.xaml", UriKind.Relative);
+                this.NavigationService.Navigate(uri);
+            }
+
+            //Fehlermeldungen wenn Comboboxen nicht Ausgewählt wurden
+            else if (IndicatorCombobox.SelectedIndex == -1 && ScaleTypeCombobox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Bitte Kennzahl und Skalentyp angeben.");
+            }
+            
+            else if (IndicatorCombobox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Bitte Kennzahl angeben.");
+            }
+            
+            else
+            {
+                MessageBox.Show("Bitte Skalentyp angeben.");
+            }
+
         }
     }
 }

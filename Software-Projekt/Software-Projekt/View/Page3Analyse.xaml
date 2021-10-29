@@ -1,4 +1,4 @@
-﻿<Page x:Class="Software_Projekt.View.Page2Analyse"
+﻿<Page x:Class="Software_Projekt.View.Page3Analyse"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Software_Projekt.View"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page2Analyse">
+      Title="Page3Analyse">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Menu IsMainMenu="True" Grid.Row="0">
             <MenuItem Header="_Datei">
@@ -24,15 +24,11 @@
             </MenuItem>
         </Menu>
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Verfügbare Kennzahlen" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-            <ListBox  Grid.Row="2" ItemsSource="{Binding}" HorizontalContentAlignment="Stretch">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Button Content="{Binding}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <TextBlock Text="Berechnung" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <TextBlock Text="Hier kommt der Input hin"/>
+            <TextBlock Text="Hier kommt der Infotext der Kennzahl hin"/>
+            <TextBlock Text="Hier kommt der Rechenweg hin"/>
+            <TextBlock Text="Hier kommt das Ergebnis hin"/>
         </StackPanel>
-        <Button Grid.Row="2" Content="Brechnung" Click="OnOpenNextPage" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

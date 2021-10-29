@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Software_Projekt.View
 {
@@ -25,6 +16,22 @@ namespace Software_Projekt.View
 
         private void OnReadFile(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void OnOpenNextPage(object sender, RoutedEventArgs e)
+        {
+            //überprüfung ob Angaben gemacht wurden
+            if (true)
+            {
+
+                Uri uri = new Uri("/View/Page3Analyse.xaml", UriKind.Relative);
+                this.NavigationService.Navigate(uri);
+            }
+            else
+            {
+                MessageBox.Show("Wählen sie eine Kennzahl aus");
+            }
 
         }
     }

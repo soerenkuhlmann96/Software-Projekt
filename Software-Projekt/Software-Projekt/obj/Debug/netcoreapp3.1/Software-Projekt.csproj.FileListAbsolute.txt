@@ -52,3 +52,5 @@ D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreap
 D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\Page1Analyse.baml
 D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\Page2Analyse.g.cs
 D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\Page2Analyse.baml
+D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\Page3Analyse.g.cs
+D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\Page3Analyse.baml
