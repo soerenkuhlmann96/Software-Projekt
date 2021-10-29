@@ -53,5 +53,10 @@ namespace Software_Projekt.View
             this.Close();
             
         }
+
+        private void OnClose(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
