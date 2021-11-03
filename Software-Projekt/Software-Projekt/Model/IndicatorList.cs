@@ -9,15 +9,12 @@ namespace Software_Projekt
     {
         private static IndicatorList indicators = new IndicatorList();
         private IndicatorList() { }
-        public static IndicatorList Load()
+        public static IndicatorList Load(string Path)
         {
             string line;
             string[] columns;
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            projectDirectory += "/Ressourcen/Indicators.csv";
             //string CSV_FilePath =  + "Ressourcen/Indicators.csv";
-            var reader = new StreamReader(projectDirectory);
+            var reader = new StreamReader(Path);
             while ((line = reader.ReadLine()) != null)
             {
                 columns = line.Split(';');

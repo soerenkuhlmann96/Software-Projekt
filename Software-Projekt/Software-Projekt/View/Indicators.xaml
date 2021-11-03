@@ -37,21 +37,29 @@
                 <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
             </MenuItem>
         </Menu>
-        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Deskriptive Statistik" Grid.Row="1"/>
-        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Wahrscheinlichkeitsrechnung" Grid.Row="1" Grid.Column="1"/>
-        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Induktive Statistik" Grid.Row="1" Grid.Column="2"/>
-        <ListBox  Grid.Row="2" ItemsSource="{Binding Path=Indicators}" HorizontalContentAlignment="Stretch">
+        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Nominal" Grid.Row="1"/>
+        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Ordinal" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource ResourceKey=TextBlockStyle}" Text="Metrisch" Grid.Row="1" Grid.Column="2"/>
+        <ListBox  Grid.Row="2" ItemsSource="{Binding Path=IndicatorsNominal}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Button Content="{Binding Path=Name}"/>
+                    <Button Content="{Binding Path=Name}" Click="OnOpenPopup"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Grid.Row="2" Grid.Column="1">
-            <!-- Liste mit einzelnen Kennzahlen -->
+        <ListBox  Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Path=IndicatorsOrdinal}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{Binding Path=Name}" Click="OnOpenPopup"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Grid.Row="2" Grid.Column="2">
-            <!-- Liste mit einzelnen Kennzahlen -->
+        <ListBox  Grid.Row="2" Grid.Column="2" ItemsSource="{Binding Path=IndicatorsMetrisch}" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{Binding Path=Name}" Click="OnOpenPopup"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
 </Window>

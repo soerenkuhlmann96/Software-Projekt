@@ -26,19 +26,6 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
-        private void OnReadFile(object sender, RoutedEventArgs e)
-        {
-            var dialog = new OpenFileDialog()
-            {
-                Filter = "spreadsheet|*.xlsx;*.csv;"
-            };
-            if(dialog.ShowDialog(this) == true)
-            {
-                Uri uri = new Uri(dialog.FileName);
-                //Datei einlesen (Klasse)
-            }
-        }
-
         private void OnAnalyseFile(object sender, RoutedEventArgs e)
         {
             var Analyse_Window = new AnalyseWindow();
@@ -52,6 +39,11 @@ namespace Software_Projekt.View
             IndicatorsWindow.Show();
             this.Close();
             
+        }
+
+        private void OnEnd(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

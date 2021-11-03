@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <Menu IsMainMenu="True" Grid.Row="0" Grid.ColumnSpan="2">
             <MenuItem Header="_Datei">
-                <MenuItem Header="_Öffnen" Click="OnReadFile" InputGestureText="Strg+N"/>
+                <MenuItem Header="_Analysieren" Click="OnAnalyseFile" InputGestureText="Strg+N"/>
                 <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
             </MenuItem>
         </Menu>
@@ -26,11 +26,9 @@
             <TextBlock  Text="Statistik-Trainer" FontSize="50" HorizontalAlignment="Center" Margin="20"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
-            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Werte einlesen" Click="OnReadFile"/>
-            <TextBox x:Name="AnalysePath" Margin="5" IsReadOnly="True"/>
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Analysieren" Click="OnAnalyseFile"/>
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Kennzahlen" Click="OnOpenIndicators"/>
-            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content=""/>
+            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Verlassen" Click="OnEnd"/>
         </StackPanel>
     </Grid>
 </Window>

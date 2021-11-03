@@ -13,6 +13,9 @@
     <Compile Update="View\Indicators.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\IndicatorsPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Page1Analyse.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Indicators.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\IndicatorsPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainWindow.xaml">

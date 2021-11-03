@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\App.xaml
-6999679964
+7829205530
 
-13660658818
+14980721831
 192-1533232326
-View\AnalyseWindow.xaml;View\Indicators.xaml;View\MainWindow.xaml;View\Page1Analyse.xaml;View\Page2Analyse.xaml;View\Page3Analyse.xaml;
+View\AnalyseWindow.xaml;View\Indicators.xaml;View\IndicatorsPopup.xaml;View\MainWindow.xaml;View\Page1Analyse.xaml;View\Page2Analyse.xaml;View\Page3Analyse.xaml;
 
 False
 
