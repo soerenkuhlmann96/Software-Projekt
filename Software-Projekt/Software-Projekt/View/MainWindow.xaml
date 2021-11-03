@@ -28,7 +28,7 @@
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Analysieren" Click="OnAnalyseFile"/>
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Kennzahlen" Click="OnOpenIndicators"/>
-            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Verlassen" Click="OnEnd"/>
+            <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Verlassen" Click="OnClickEnd"/>
         </StackPanel>
     </Grid>
 </Window>

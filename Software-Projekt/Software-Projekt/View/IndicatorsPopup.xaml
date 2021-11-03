@@ -6,13 +6,15 @@
         xmlns:local="clr-namespace:Software_Projekt.View"
         mc:Ignorable="d"
         Title="IndicatorsPopup" Height="450" Width="800">
+
     <StackPanel>
+
+        <TextBlock Text="hier kommt die Kennzahl hin" FontSize="24"/>
         <Label Content="Vorraussetzungen"/>
-        <TextBlock Text="{Binding }"/>
+        <TextBlock Text="hier kommen die vorraussetzungen hin"/>
         <Label Content="Berechnung"/>
-        <TextBlock/>
+        <TextBlock Text="hier kommt die berechnung hin"/>
         <Label Content="Infos"/>
-        <TextBlock/>
+        <TextBlock Text="hier kommen die infos hin"/>
     </StackPanel>
-    
 </Window>

@@ -10,24 +10,30 @@
     <Compile Update="View\AnalyseWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\CSVPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DataPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Indicators.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\IndicatorsPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Page1Analyse.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\Page2Analyse.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\Page3Analyse.xaml.cs">
+    <Compile Update="View\InputPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\AnalyseWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CSVPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DataPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Indicators.xaml">
@@ -36,16 +42,10 @@
     <Page Update="View\IndicatorsPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\InputPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Page1Analyse.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Page2Analyse.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Page3Analyse.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

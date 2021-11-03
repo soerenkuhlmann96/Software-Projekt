@@ -41,9 +41,9 @@ namespace Software_Projekt.View
             
         }
 
-        private void OnEnd(object sender, RoutedEventArgs e)
+        private void OnClickEnd(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

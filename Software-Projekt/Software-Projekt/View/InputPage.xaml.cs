@@ -14,18 +14,13 @@ using System.Windows.Shapes;
 namespace Software_Projekt.View
 {
     /// <summary>
-    /// Interaktionslogik für Page3Analyse.xaml
+    /// Interaktionslogik für InputPage.xaml
     /// </summary>
-    public partial class Page3Analyse : Page
+    public partial class InputPage : Page
     {
-        public Page3Analyse()
+        public InputPage()
         {
             InitializeComponent();
-        }
-
-        private void OnReadFile(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
