@@ -13,16 +13,28 @@
     <Compile Update="View\CSVPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\DataDescriptionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\DataPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\Indicators.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\IndicatorSelectionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\IndicatorsPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\InputPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InputPopupWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ResultPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -33,10 +45,16 @@
     <Page Update="View\CSVPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\DataDescriptionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\DataPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Indicators.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\IndicatorSelectionPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\IndicatorsPopup.xaml">
@@ -45,7 +63,13 @@
     <Page Update="View\InputPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\InputPopupWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ResultPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
