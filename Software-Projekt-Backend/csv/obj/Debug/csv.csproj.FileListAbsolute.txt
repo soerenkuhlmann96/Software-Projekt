@@ -1,0 +1,7 @@
+C:\Users\Mohamed Ibrahim\source\repos\csv\csv\bin\Debug\csv.exe.config
+C:\Users\Mohamed Ibrahim\source\repos\csv\csv\bin\Debug\csv.exe
+C:\Users\Mohamed Ibrahim\source\repos\csv\csv\bin\Debug\csv.pdb
+C:\Users\Mohamed Ibrahim\source\repos\csv\csv\obj\Debug\csv.csproj.AssemblyReference.cache
+C:\Users\Mohamed Ibrahim\source\repos\csv\csv\obj\Debug\csv.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed Ibrahim\source\repos\csv\csv\obj\Debug\csv.exe
+C:\Users\Mohamed Ibrahim\source\repos\csv\csv\obj\Debug\csv.pdb
