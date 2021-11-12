@@ -2,6 +2,8 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
+using System.Reflection;
 
 namespace Software_Projekt.ViewModel
 {
@@ -26,6 +28,18 @@ namespace Software_Projekt.ViewModel
             string IndicatorsPathMetrisch = IndicatorsPath + "/Ressourcen/IndicatorsMetrisch.csv";
 
             IndicatorsMetrisch = IndicatorList.Load(IndicatorsPathMetrisch);
+        }
+        public static void CloseWIndowUsingIdentifier(string windowTag)
+        {
+            Assembly currentAssembly = Assembly.GetExecutingAssembly();
+            foreach (Window w in Application.Current.Windows)
+            {
+                if (w.GetType().Assembly == currentAssembly && w.Tag.Equals(windowTag))
+                {
+                    w.Close();
+                    break;
+                }
+            }
         }
     }
 }

@@ -22,5 +22,15 @@ namespace Software_Projekt.View
         {
             InitializeComponent();
         }
+
+        private void OnClickEnd(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void OnClickContinue(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
+        }
     }
 }

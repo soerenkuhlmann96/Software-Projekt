@@ -21,5 +21,11 @@ namespace Software_Projekt.View
         {
             InitializeComponent();
         }
+
+        private void OnClickContinue(object sender, RoutedEventArgs e)
+        {
+            // Daten Einlesen
+            this.Close();
+        }
     }
 }

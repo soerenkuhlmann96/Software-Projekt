@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Software_Projekt"
         mc:Ignorable="d"
-        Title="Statistik-Trainer" Height="450" Width="800" MinHeight="400" MinWidth="700" Background="Gray">
+        Title="Statistik-Trainer" Height="450" Width="800" MinHeight="400" MinWidth="700" Background="Gray" Tag="MainWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

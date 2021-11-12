@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:Software_Projekt.View"
         mc:Ignorable="d"
         Title="AnalyseWindow" Height="450" Width="800"
-        Source="DataPage.xaml" Background="Gray">
+        Source="DataPage.xaml" Background="Gray" Tag="AnalyseWindow" MinHeight="500">
 
 </NavigationWindow>

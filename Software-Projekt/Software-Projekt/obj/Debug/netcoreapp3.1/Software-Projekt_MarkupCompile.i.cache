@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\App.xaml
-111412586023
+101878148141
 
-181879441871
+17-1106927312
 192-1533232326
-View\AnalyseWindow.xaml;View\CSVPage.xaml;View\DataDescriptionPage.xaml;View\DataPage.xaml;View\Indicators.xaml;View\IndicatorSelectionPage.xaml;View\IndicatorsPopup.xaml;View\InputPage.xaml;View\InputPopupWindow.xaml;View\MainWindow.xaml;View\ResultPage.xaml;
+View\AnalyseWindow.xaml;View\CSVPopupWindow.xaml;View\DataDescriptionPage.xaml;View\DataPage.xaml;View\Indicators.xaml;View\IndicatorSelectionPage.xaml;View\IndicatorsPopup.xaml;View\InputPopupWindow.xaml;View\MainWindow.xaml;View\ResultPage.xaml;
 
 True
 

@@ -53,7 +53,7 @@ namespace Software_Projekt.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Software-Projekt;V1.0.0.0;component/view/inputpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Software-Projekt;component/view/inputpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\InputPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

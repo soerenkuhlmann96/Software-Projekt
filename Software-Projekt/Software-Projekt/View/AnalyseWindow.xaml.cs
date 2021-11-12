@@ -15,17 +15,9 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
-        private void OnReadFile(object sender, RoutedEventArgs e)
+        public void CloseWindow(object sender, RoutedEventArgs e)
         {
-            var dialog = new OpenFileDialog()
-            {
-                Filter = "spreadsheet|*.csv;"
-            };
-            if (dialog.ShowDialog(this) == true)
-            {
-                Uri uri = new Uri(dialog.FileName);
-                //Datei einlesen (Klasse)
-            }
+            this.Close();
         }
     }
 }

@@ -22,5 +22,10 @@ namespace Software_Projekt.View
         {
             InitializeComponent();
         }
+
+        private void OnClickEnd(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
