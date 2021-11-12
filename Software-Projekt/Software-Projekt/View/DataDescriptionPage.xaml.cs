@@ -32,5 +32,10 @@ namespace Software_Projekt.View
         {
             this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
         }
+
+        private void OnClickBack(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/View/DataPage.xaml", UriKind.Relative));
+        }
     }
 }

@@ -23,14 +23,22 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
+        // Close Application
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        // Go to next Page
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/ResultPage.xaml", UriKind.Relative));
+        }
+
+        // Go back to Previous Page
+        private void OnClickBack(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/View/DataDescriptionPage.xaml", UriKind.Relative));
         }
     }
 }

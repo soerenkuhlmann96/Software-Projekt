@@ -27,5 +27,18 @@ namespace Software_Projekt.View
         {
             Application.Current.Shutdown();
         }
+
+        private void OnClickBackToMainWindow(object sender, RoutedEventArgs e)
+        {
+            var mainwindow = new MainWindow();
+            mainwindow.Show();
+            string tag = "AnalyseWindow";
+            ViewModel.ViewModel.CloseWIndowUsingIdentifier(tag);
+        }
+
+        private void OnClickBackToPreviousPage(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
+        }
     }
 }

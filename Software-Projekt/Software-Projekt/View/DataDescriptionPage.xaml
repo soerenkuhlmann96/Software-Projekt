@@ -48,8 +48,9 @@
                 <ComboBoxItem Content="1"/>
                 <ComboBoxItem Content="2"/>
             </ComboBox>
+            <Button Content="Weiter" Margin="0,10,0,10" Click="OnClickContinue"/>
             <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Content="Weiter" Margin="0,10,10,10" Click="OnClickContinue"/>
+                <Button Content="Zurück" Margin="0,10,10,10" Click="OnClickBack"/>
                 <Button Content="Beenden" Margin="10,10,0,10" Click="OnClickEnd"/>
             </StackPanel>
         </StackPanel>
