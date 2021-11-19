@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\
+C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\
 Software_Projekt
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\App.xaml
+C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\App.xaml
 101878148141
 
-15290409118
+16-1656764494
 192-1533232326
 View\AnalyseWindow.xaml;View\CSVPopupWindow.xaml;View\DataDescriptionPage.xaml;View\DataPage.xaml;View\Indicators.xaml;View\IndicatorSelectionPage.xaml;View\IndicatorsPopup.xaml;View\InputPopupWindow.xaml;View\MainWindow.xaml;View\ResultPage.xaml;
 

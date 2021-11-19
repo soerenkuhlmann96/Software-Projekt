@@ -4,17 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Software_Projekt.View"
+        xmlns:vm="clr-namespace:Software_Projekt.ViewModel" 
         mc:Ignorable="d"
         Title="IndicatorsPopup" Height="450" Width="800">
 
-    <StackPanel>
-
-        <TextBlock Text="hier kommt die Kennzahl hin" FontSize="24"/>
-        <Label Content="Vorraussetzungen"/>
-        <TextBlock Text="hier kommen die vorraussetzungen hin"/>
-        <Label Content="Berechnung"/>
-        <TextBlock Text="hier kommt die berechnung hin"/>
-        <Label Content="Infos"/>
-        <TextBlock Text="hier kommen die infos hin"/>
-    </StackPanel>
+    <ItemsControl ItemsSource="{Binding Path=informations}">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <StackPanel>
+                    <TextBlock Text="{Binding Path=IndicatorName}" FontSize="24"/>
+                    <Label Content="Vorraussetzungen"/>
+                    <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorRequirements}"/>
+                    <Label Content="Berechnung"/>
+                    <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorCalculations}"/>
+                    <Label Content="Infos"/>
+                    <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorsInfo}"/>
+                </StackPanel>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
 </Window>

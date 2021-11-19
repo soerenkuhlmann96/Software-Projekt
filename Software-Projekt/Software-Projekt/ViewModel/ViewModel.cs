@@ -4,30 +4,31 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Reflection;
+using Software_Projekt.Model;
 
 namespace Software_Projekt.ViewModel
 {
-    class ViewModel 
+    class ViewModel
     {
         public IndicatorList IndicatorsNominal { get; set; }
         public IndicatorList IndicatorsOrdinal { get; set; }
         public IndicatorList IndicatorsMetrisch { get; set; }
-        //IndicatorsPath
+
         public ViewModel()
         {
             string workingDirektory = Environment.CurrentDirectory;
             string IndicatorsPath = Directory.GetParent(workingDirektory).Parent.Parent.FullName;
             string IndicatorsPathNominal = IndicatorsPath + "/Ressourcen/IndicatorsNominal.csv";
+            string IndicatorsPathOrdinal = IndicatorsPath + "/Ressourcen/IndicatorsOrdinal.csv";
+            string IndicatorsPathMetrisch = IndicatorsPath + "/Ressourcen/IndicatorsMetrisch.csv";
 
             IndicatorsNominal = IndicatorList.Load(IndicatorsPathNominal);
 
-            string IndicatorsPathOrdinal = IndicatorsPath + "/Ressourcen/IndicatorsOrdinal.csv";
-
             IndicatorsOrdinal = IndicatorList.Load(IndicatorsPathOrdinal);
 
-            string IndicatorsPathMetrisch = IndicatorsPath + "/Ressourcen/IndicatorsMetrisch.csv";
-
             IndicatorsMetrisch = IndicatorList.Load(IndicatorsPathMetrisch);
+
+
         }
         public static void CloseWIndowUsingIdentifier(string windowTag)
         {
@@ -41,5 +42,62 @@ namespace Software_Projekt.ViewModel
                 }
             }
         }
+        public IndicatorInformations SaveIndicator(string name, string list)
+        {
+            IndicatorInformations indicatorInformation = new IndicatorInformations();
+
+            
+            if (list == "Nominal")
+            {
+                foreach (var item in IndicatorsNominal)
+                {
+                    if (item.Name == name)
+                    {
+
+                        indicatorInformation.IndicatorName = name;
+                        indicatorInformation.IndicatorRequirements = "muss noch nachgetragen werden";
+                        indicatorInformation.IndicatorCalculations = item.Formel;
+                        indicatorInformation.IndicatorsInfo = item.Beschreibung;
+                        break;
+                    }
+                }
+                return indicatorInformation;
+            }
+
+            else if(list == "Ordinal")
+            {
+                
+                foreach (var item in IndicatorsOrdinal)
+                {
+                    if (item.Name == name)
+                    {
+                        indicatorInformation.IndicatorName = name;
+                        indicatorInformation.IndicatorRequirements = "muss noch nachgetragen werden";
+                        indicatorInformation.IndicatorCalculations = item.Formel;
+                        indicatorInformation.IndicatorsInfo = item.Beschreibung;
+                        break;
+                    }
+                }
+                return indicatorInformation;
+            }
+            else
+            {
+                
+                foreach (var item in IndicatorsMetrisch)
+                {
+                    if (item.Name == name)
+                    {
+                        indicatorInformation.IndicatorName = name;
+                        indicatorInformation.IndicatorRequirements = "muss noch nachgetragen werden";
+                        indicatorInformation.IndicatorCalculations = item.Formel;
+                        indicatorInformation.IndicatorsInfo = item.Beschreibung;
+                        break;
+                    }
+                }
+                return indicatorInformation;
+            }
+
+        }
+
     }
 }

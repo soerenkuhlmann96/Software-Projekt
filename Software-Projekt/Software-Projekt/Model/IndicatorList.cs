@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 
 namespace Software_Projekt
 {
-    public class IndicatorList : List<Indicator>
+    public class IndicatorList : ObservableCollection<Indicator>
     {
         private static IndicatorList indicators = new IndicatorList();
         private IndicatorList() { }
@@ -13,7 +14,6 @@ namespace Software_Projekt
         {
             string line;
             string[] columns;
-            //string CSV_FilePath =  + "Ressourcen/Indicators.csv";
             var reader = new StreamReader(Path);
             while ((line = reader.ReadLine()) != null)
             {

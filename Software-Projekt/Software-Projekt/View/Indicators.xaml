@@ -44,21 +44,21 @@
         <ListBox  Grid.Row="2" ItemsSource="{Binding Path=IndicatorsNominal}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Button Content="{Binding Path=Name}" Click="OnOpenPopup"/>
+                    <Button Content="{Binding Path=Name}" Click="OnOpenPopupNominal"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
         <ListBox  Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Path=IndicatorsOrdinal}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Button Content="{Binding Path=Name}" Click="OnOpenPopup"/>
+                    <Button Content="{Binding Path=Name}" Click="OnOpenPopupOrdinal"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
         <ListBox  Grid.Row="2" Grid.Column="2" ItemsSource="{Binding Path=IndicatorsMetrisch}" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Button Content="{Binding Path=Name}" Click="OnOpenPopup"/>
+                    <Button Content="{Binding Path=Name}" Click="OnOpenPopupMetrisch"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
