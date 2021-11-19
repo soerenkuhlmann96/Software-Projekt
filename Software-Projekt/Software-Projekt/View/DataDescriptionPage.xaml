@@ -38,16 +38,7 @@
                 <ComboBoxItem Content="Nein"/>
             </ComboBox>
             <Label Content="Skalentyp" Margin="0,5,0,5"/>
-            <!-- Möglichkeit 1 -->
-            <!--<ComboBox SelectedIndex="0" Margin="0,5,0,5">
-                <ComboBoxItem Content="Nominal"/>
-                <ComboBoxItem Content="Ordinal"/>
-                <ComboBoxItem Content="Metrisch Intervallskala"/>
-                <ComboBoxItem Content="Metrisch Verhältnisskala"/>
-                <ComboBoxItem Content="Metrisch Absolutskala"/>
-            </ComboBox> -->
-            
-            <!-- Möglichkeit 2 --> <!--
+
             <ComboBox SelectedIndex="0">
                 <ComboBoxItem Content="Nominal"/>
                 <ComboBoxItem Content="Ordinal"/>
@@ -57,29 +48,8 @@
                 <CheckBox Content="Intevallskala"/>
                 <CheckBox Content="Verhältnisskala"/>
                 <CheckBox Content="Absolutskala"/>
-            </StackPanel> -->
-
-            <!--Möglickeit 3 -->
-            <ComboBox SelectedIndex="0">
-                <ComboBoxItem Content="Nominal"/>
-                <ComboBoxItem Content="Ordinal"/>
-                <ComboBoxItem Content="Metrisch "/>
-            </ComboBox>
-            <ComboBox SelectedIndex="0" Margin="0,5,0,5">
-                <ComboBoxItem Content="Intevallskala"/>
-                <ComboBoxItem Content="Verhältnisskala"/>
-                <ComboBoxItem Content="Absolutskala"/>
-            </ComboBox>
-            <Label Content="Wie viele Merkmale werden Beobachtet?" Margin="0,5,0,5"/>
-            <ComboBox SelectedIndex="0" Margin="0,5,0,5">
-                <ComboBoxItem Content="1"/>
-                <ComboBoxItem Content="2"/>
-            </ComboBox>
-            <Button Content="Weiter" Margin="0,10,0,10" Click="OnClickContinue"/>
-            <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,30,0,0">
-                <Button Content="Zurück" Margin="0,10,10,10" Click="OnClickBack"/>
-                <Button Content="Beenden" Margin="10,10,0,10" Click="OnClickEnd"/>
             </StackPanel>
+
         </StackPanel>
     </Grid>
 </Page>
