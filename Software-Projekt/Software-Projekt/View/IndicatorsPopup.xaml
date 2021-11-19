@@ -8,19 +8,14 @@
         mc:Ignorable="d"
         Title="IndicatorsPopup" Height="450" Width="800">
 
-    <ItemsControl ItemsSource="{Binding Path=informations}">
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <StackPanel>
-                    <TextBlock Text="{Binding Path=IndicatorName}" FontSize="24"/>
-                    <Label Content="Vorraussetzungen"/>
-                    <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorRequirements}"/>
-                    <Label Content="Berechnung"/>
-                    <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorCalculations}"/>
-                    <Label Content="Infos"/>
-                    <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorsInfo}"/>
-                </StackPanel>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+
+    <StackPanel>
+        <TextBlock Text="" FontSize="24"/>
+        <Label Content="Vorraussetzungen"/>
+        <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorRequirements}"/>
+        <Label Content="Berechnung"/>
+        <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorCalculations}"/>
+        <Label Content="Infos"/>
+        <TextBlock Text="Binding Source={StaticResource VMIndicator},Path=IndicatorsInfo}"/>
+    </StackPanel>
 </Window>

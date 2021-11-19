@@ -39,15 +39,15 @@
             </ComboBox>
             <Label Content="Skalentyp" Margin="0,5,0,5"/>
             <!-- Möglichkeit 1 -->
-            <ComboBox SelectedIndex="0" Margin="0,5,0,5">
+            <!--<ComboBox SelectedIndex="0" Margin="0,5,0,5">
                 <ComboBoxItem Content="Nominal"/>
                 <ComboBoxItem Content="Ordinal"/>
                 <ComboBoxItem Content="Metrisch Intervallskala"/>
                 <ComboBoxItem Content="Metrisch Verhältnisskala"/>
                 <ComboBoxItem Content="Metrisch Absolutskala"/>
-            </ComboBox>
+            </ComboBox> -->
             
-            <!-- Möglichkeit 2
+            <!-- Möglichkeit 2 --> <!--
             <ComboBox SelectedIndex="0">
                 <ComboBoxItem Content="Nominal"/>
                 <ComboBoxItem Content="Ordinal"/>
@@ -57,9 +57,9 @@
                 <CheckBox Content="Intevallskala"/>
                 <CheckBox Content="Verhältnisskala"/>
                 <CheckBox Content="Absolutskala"/>
-            </StackPanel>-->
-            
-            <!--Möglickeit 3
+            </StackPanel> -->
+
+            <!--Möglickeit 3 -->
             <ComboBox SelectedIndex="0">
                 <ComboBoxItem Content="Nominal"/>
                 <ComboBoxItem Content="Ordinal"/>
@@ -69,7 +69,7 @@
                 <ComboBoxItem Content="Intevallskala"/>
                 <ComboBoxItem Content="Verhältnisskala"/>
                 <ComboBoxItem Content="Absolutskala"/>
-            </ComboBox> -->
+            </ComboBox>
             <Label Content="Wie viele Merkmale werden Beobachtet?" Margin="0,5,0,5"/>
             <ComboBox SelectedIndex="0" Margin="0,5,0,5">
                 <ComboBoxItem Content="1"/>
