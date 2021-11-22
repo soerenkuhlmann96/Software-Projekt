@@ -1,35 +1,34 @@
-﻿Absolute Häufigkeitsverteilung;x+1;Text1;info1
-kumulierte absolute Häufigkeitsverteilung;x+2;Text2;info2
-Relative Häufigkeitsverteilung;x+3;Text3;info3
+﻿Absolute Häufigkeitsverteilung;x+1;Text1;Auf alle Daten Anwendbar
+Relative Häufigkeitsverteilung;x+2;Text2;Auf alle Daten anwendbar 
+kumulierte absolute Häufigkeitsverteilung;x+3;Text3;Ordinal oder kardinal, metrisch 
 kumulierte relative Häufigkeitsverteilung ;x+4;Text4;info4
-Lagemaße;x+5;Text5;info5
-Median;x+6;Text6;info6
-Quantil;x+7;Text7;info7
-Arithmetisches Mittel;x+8;Text8;info8
-Geometrisches Mittel;x+9;Text9;info9
-Spannweite;x+10;Text10;info10
-Quantilsabstand;x+11;Text11;info11
-Varianz;x+12;Text12;info12
-Standardabweichung;x+13;Text13;info13
-Variationskoeffizient;x+14;Text14;info14
-Merkmalssumme;x+15;Text15;info15
-Anteilswerte;x+16;Text16;info16
-Absolutes Konzentrationsmaß;x+17;Text17;info17
-Lorenzkurve;x+18;Text18;info18
-Gini Maß;x+19;Text19;info19
-Randverteilung;x+20;Text20;info20
-Kontingenztabelle;x+21;Text21;info21
-Chi-Quadrat;x+22;Text22;info22
-Kontingenzmaß nach Cramér;x+23;Text23;info23
-Kovarianz;x+24;Text24;info24
-Pearson’scher Korrelationskoeffizient;x+25;Text25;info25
-Rangzahl;x+26;Text26;info26
-Spearman’scher Rangkorrelationskoeffizient;x+27;Text27;info27
-Einfache Lineare Regresion;x+28;Text28;info28
-Güte der Regression;x+29;Text29;info29
-Bestimmtheitsmaß;x+30;Text30;info30
-Wertindex;x+31;Text31;info31
-Preisindex nach Laspeyres;x+32;Text32;info32
-Preisindex nach Paasche;x+33;Text33;info33
-Mengenindex nach Laspeyres;x+34;Text34;info34
-Mengenindex nach Paasche;x+35;Text35;info35
+Median;x+5;Text5;Ordinal oder kardinal metrisch
+Quantil;x+6;Text6;Ordinal oder kardinal metrisch 
+Arithmetisches Mittel;x+7;Text7;Metrisch messbar 
+Geometrisches Mittel;x+8;Text8;Verhätnissskala positive ausprägung 
+Spannweite;x+9;Text9;info9
+Quantilsabstand;x+10;Text10;info10
+Varianz;x+11;Text11;info11
+Standardabweichung;x+12;Text12;info12
+Variationskoeffizient;x+13;Text13;info13
+Merkmalssumme;x+14;Text14;info14
+Anteilswerte;x+15;Text15;info15
+Absolutes Konzentrationsmaß;x+16;Text16;info16
+Lorenzkurve;x+17;Text17;info17
+Gini Maß;x+18;Text18;info18
+Randverteilung;x+19;Text19;info19
+Kontingenztabelle;x+20;Text20;info20
+Chi-Quadrat;x+21;Text21;info21
+Kontingenzmaß nach Cramér;x+22;Text22;info22
+Kovarianz;x+23;Text23;info23
+Pearson’scher Korrelationskoeffizient;x+24;Text24;info24
+Rangzahl;x+25;Text25;info25
+Spearman’scher Rangkorrelationskoeffizient;x+26;Text26;info26
+Einfache Lineare Regresion;x+27;Text27;info27
+Güte der Regression;x+28;Text28;info28
+Bestimmtheitsmaß;x+29;Text29;info29
+Wertindex;x+30;Text30;info30
+Preisindex nach Laspeyres;x+31;Text31;info31
+Preisindex nach Paasche;x+32;Text32;info32
+Mengenindex nach Laspeyres;x+33;Text33;info33
+Mengenindex nach Paasche;x+34;Text34;info34

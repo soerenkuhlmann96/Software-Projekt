@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Software_Projekt.View"
         mc:Ignorable="d"
+        x:Name="CSVWindow"
         Title="CSVPopupWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -25,16 +26,17 @@
         </Menu>
         <StackPanel HorizontalAlignment="Center" Grid.Row="1" Margin="0,20,0,20">
             <TextBlock Text="Anzahl Zahlenreihen" Margin="0,0,0,10"/>
-            <ComboBox SelectedIndex="0">
+            <ComboBox SelectedIndex="0" x:Name="Amount">
                 <ComboBoxItem Content="1"/>
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
                 <ComboBoxItem Content="4"/>
             </ComboBox>
             
-            <Button Content="Datei öffnen" Margin="0,10,0,10"/>
-            
-            <TextBox IsReadOnly="True" Text="Hier kommt der Pfad rein" Width="200"/>
+            <Button Content="Datei öffnen" Click="OnOpenFile" Margin="0,10,0,10"/>
+            <ItemsControl ItemsSource="{Binding ElementName=CSVWindow}">
+                <TextBox Text="{Binding ElementName=CSVWindow, Path=Path}" IsReadOnly="True" Width="200"/>
+            </ItemsControl>
         </StackPanel>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button Content="Weiter" Margin="0,10,10,10" Click="OnClickContinue"/>
