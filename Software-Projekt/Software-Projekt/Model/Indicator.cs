@@ -10,5 +10,6 @@ namespace Software_Projekt
         public string Name { get; set; }
         public string Formel { get; set; }
         public string Beschreibung { get; set; }
+        public string Informationen { get; set; }
     }
 }

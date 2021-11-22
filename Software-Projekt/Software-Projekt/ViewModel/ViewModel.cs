@@ -55,7 +55,7 @@ namespace Software_Projekt.ViewModel
                     {
 
                         indicatorInformation.IndicatorName = name;
-                        indicatorInformation.IndicatorRequirements = "muss noch nachgetragen werden";
+                        indicatorInformation.IndicatorRequirements = item.Informationen;
                         indicatorInformation.IndicatorCalculations = item.Formel;
                         indicatorInformation.IndicatorsInfo = item.Beschreibung;
                         break;
@@ -72,7 +72,7 @@ namespace Software_Projekt.ViewModel
                     if (item.Name == name)
                     {
                         indicatorInformation.IndicatorName = name;
-                        indicatorInformation.IndicatorRequirements = "muss noch nachgetragen werden";
+                        indicatorInformation.IndicatorRequirements = item.Informationen;
                         indicatorInformation.IndicatorCalculations = item.Formel;
                         indicatorInformation.IndicatorsInfo = item.Beschreibung;
                         break;
@@ -88,7 +88,7 @@ namespace Software_Projekt.ViewModel
                     if (item.Name == name)
                     {
                         indicatorInformation.IndicatorName = name;
-                        indicatorInformation.IndicatorRequirements = "muss noch nachgetragen werden";
+                        indicatorInformation.IndicatorRequirements = item.Informationen;
                         indicatorInformation.IndicatorCalculations = item.Formel;
                         indicatorInformation.IndicatorsInfo = item.Beschreibung;
                         break;
