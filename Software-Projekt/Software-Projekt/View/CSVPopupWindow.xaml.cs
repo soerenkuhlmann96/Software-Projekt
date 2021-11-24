@@ -56,7 +56,8 @@ namespace Software_Projekt.View
             {
                 Path = openFile.FileName;
 
-                
+                ViewModel.ViewModelDataReader dataReader = new ViewModel.ViewModelDataReader(Path,amount);
+
             }
             
 

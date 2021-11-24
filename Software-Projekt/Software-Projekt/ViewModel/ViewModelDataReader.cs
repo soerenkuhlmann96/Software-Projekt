@@ -7,10 +7,11 @@ namespace Software_Projekt.ViewModel
 {
     class ViewModelDataReader
     {
-        public ViewModelDataReader(string path)
+        List<double[]> Data = new List<double[]>();
+        public ViewModelDataReader(string path, int amount)
         {
             DataReader dataReader = new DataReader();
-            dataReader.Load(path);
+            Data = dataReader.Load(path, amount);
         }
     }
 }
