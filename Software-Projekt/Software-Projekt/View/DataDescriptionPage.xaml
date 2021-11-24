@@ -7,7 +7,16 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DataDescriptionPage">
-
+    <Page.Resources>
+        <Style TargetType="RadioButton" x:Key="RadioButtonStyle">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=ComboboxScaleType, Path=SelectedIndex}" Value="2">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -29,8 +38,8 @@
         <StackPanel Grid.Row="2" HorizontalAlignment="Center">
             <Label Content="Merkmalsausprägung" Margin="0,5,0,5"/>
             <ComboBox SelectedIndex="0" Margin="0,5,0,5">
-                <ComboBoxItem Content="Name"/>
                 <ComboBoxItem Content="Zahlen"/>
+                <ComboBoxItem Content="Namen"/>
             </ComboBox>
             <Label Content="Gibt es eine Ordnung/Rang?" Margin="0,5,0,5"/>
             <ComboBox SelectedIndex="0" Margin="0,5,0,5">
@@ -39,17 +48,23 @@
             </ComboBox>
             <Label Content="Skalentyp" Margin="0,5,0,5"/>
 
-            <ComboBox SelectedIndex="0">
+            <ComboBox SelectedIndex="0" x:Name="ComboboxScaleType">
                 <ComboBoxItem Content="Nominal"/>
                 <ComboBoxItem Content="Ordinal"/>
                 <ComboBoxItem Content="Metrisch "/>
             </ComboBox>
             <StackPanel>
-                <CheckBox Content="Intevallskala"/>
-                <CheckBox Content="Verhältnisskala"/>
-                <CheckBox Content="Absolutskala"/>
+                <RadioButton Content="Intevallskala" Style="{StaticResource RadioButtonStyle}"/>
+                <RadioButton Content="Verhältnisskala" Style="{StaticResource RadioButtonStyle}"/>
+                <RadioButton Content="Absolutskala" Style="{StaticResource RadioButtonStyle}"/>
             </StackPanel>
-
+        </StackPanel>
+        <StackPanel Grid.Row="3" Margin="0,10,0,0">
+            <Button Content="Weiter" Width="60" Click="OnClickContinue"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Zurück" Margin="0,10,10,10" Click="OnClickBack"/>
+                <Button Content="Beenden" Margin="10,10,0,10" Click="OnClickEnd"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

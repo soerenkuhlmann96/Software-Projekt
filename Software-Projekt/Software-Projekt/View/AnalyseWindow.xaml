@@ -8,3 +8,5 @@
         Title="AnalyseWindow" Height="450" Width="800"
         Source="DataPage.xaml" Background="Gray" Tag="AnalyseWindow" MinHeight="550" ShowsNavigationUI="False">
 </NavigationWindow>
+    
+    

@@ -41,7 +41,7 @@ namespace Software_Projekt.View
 
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
-            Path;
+            //Path;
             this.Close();
         }
 
@@ -55,6 +55,8 @@ namespace Software_Projekt.View
             if (openFile.ShowDialog() == true)
             {
                 Path = openFile.FileName;
+
+                
             }
             
 
