@@ -11,25 +11,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Software_Projekt.View
 {
     /// <summary>
-    /// Interaktionslogik für CSVPopupWindow.xaml
+    /// Interaktionslogik für CSVPage.xaml
     /// </summary>
-    public partial class CSVPopupWindow : Window, INotifyPropertyChanged
+    public partial class CSVPage : Page, INotifyPropertyChanged
     {
         private string path;
         public int amount;
-
         public string Path
         {
             get => path;
             set => OnPropertyChanged<string>(ref path, value);
         }
-
-        public CSVPopupWindow()
+        public CSVPage()
         {
             InitializeComponent();
         }
@@ -41,8 +40,21 @@ namespace Software_Projekt.View
 
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
-            //Path;
-            this.Close();
+            if (Path == null)
+            {
+                MessageBox.Show("Datei auswählen!");
+            }
+            else
+            {
+                //DataDescriptionPage page = new DataDescriptionPage(Path);
+                //this.NavigationService.Navigate(page);
+                this.NavigationService.Navigate(new Uri("/view/datadescriptionpage.xaml", UriKind.Relative));
+
+            }
+        }
+        private void OnClickGoBack(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/View/DataPage.xaml", UriKind.Relative));
         }
 
         private void OnOpenFile(object sender, RoutedEventArgs e)
@@ -55,12 +67,7 @@ namespace Software_Projekt.View
             if (openFile.ShowDialog() == true)
             {
                 Path = openFile.FileName;
-
-                ViewModel.ViewModelDataReader dataReader = new ViewModel.ViewModelDataReader(Path,amount);
-
             }
-            
-
         }
         private void OnPropertyChanged<T>(ref T variable, T value, [CallerMemberName] string propertyName = null)
         {
@@ -68,5 +75,7 @@ namespace Software_Projekt.View
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         public event PropertyChangedEventHandler PropertyChanged;
+
     }
+
 }

@@ -10,7 +10,7 @@
     <Compile Update="View\AnalyseWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\CSVPopupWindow.xaml.cs">
+    <Compile Update="View\CSVPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\DataDescriptionPage.xaml.cs">
@@ -28,7 +28,7 @@
     <Compile Update="View\IndicatorsPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\InputPopupWindow.xaml.cs">
+    <Compile Update="View\InputPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ResultPage.xaml.cs">
@@ -39,7 +39,7 @@
     <Page Update="View\AnalyseWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\CSVPopupWindow.xaml">
+    <Page Update="View\CSVPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\DataDescriptionPage.xaml">
@@ -57,7 +57,7 @@
     <Page Update="View\IndicatorsPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\InputPopupWindow.xaml">
+    <Page Update="View\InputPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainWindow.xaml">

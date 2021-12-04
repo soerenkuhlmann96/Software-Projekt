@@ -1,6 +1,6 @@
-﻿Absolute Häufigkeitsverteilung;x+1;Text1;Auf alle Daten Anwendbar
-Relative Häufigkeitsverteilung;x+2;Text2;Auf alle Daten anwendbar 
-kumulierte absolute Häufigkeitsverteilung;x+3;Text3;Ordinal oder kardinal, metrisch 
+﻿Absolute Häufigkeitsverteilung;h(xj) = hj;Aus der Statistik ablesen bzw. durch die Auszählung der beobachteten Ausprägungen aus der gegebenen Statistik erhält man die absolute Häufigkeitsverteilung von X. ;Auf alle Daten Anwendbar
+Kummulierte absolute Häufigkeitsverteilung;H(xj) = Hj;Alle absoluten Häufigkeitsverteilungen werden je Zeile immer jeweils aufeinander addiert. Wenn alle absoluten Häufigkeiten der jeweiligen Ausprägungen aufeinander addiert wurden, müsste  Erhebungsmasse sein.;Auf alle Daten anwendbar 
+Relative Häufigkeitsverteilung;f(xj) = fj;Text3;Ordinal oder kardinal, metrisch 
 kumulierte relative Häufigkeitsverteilung ;x+4;Text4;info4
 Median;x+5;Text5;Ordinal oder kardinal metrisch
 Quantil;x+6;Text6;Ordinal oder kardinal metrisch 

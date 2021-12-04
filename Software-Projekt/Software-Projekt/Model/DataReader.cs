@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Software_Projekt.Model
 {
-    class DataReader
+    public class DataReader
     {
-        List<double[]> DataSeries = new List<double[]>();
+        private List<double[]> DataSeries = new List<double[]>();
         public List<double[]> Load(string path, int amount)
         {
             if (!File.Exists(path))
@@ -30,22 +30,6 @@ namespace Software_Projekt.Model
 
             }
             return DataSeries;
-
-
-
-            //if (Data.Length > 0 && Data[0].Length > 2)
-            //{
-            //    double[] Data1 = new double[leng];
-            //    double[] Data0 = new double[leng];
-            //    var width = Data[0].Length - 1;
-            //    for (int i = 0; i < leng; i++)
-            //    {
-            //        var d = Data[i].Split(',');
-
-            //        Data0[i] = double.Parse(d[0]);
-            //        Data1[i] = double.Parse(d[1]);
-            //    }
-            //}
         }
     }
 }

@@ -64,13 +64,11 @@ D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreap
 D:\GItHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\Software-Projekt.csproj.AssemblyReference.cache
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\Software-Projekt.csproj.AssemblyReference.cache
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\AnalyseWindow.g.cs
-C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\CSVPopupWindow.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\DataDescriptionPage.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\DataPage.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\Indicators.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\IndicatorSelectionPage.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\IndicatorsPopup.g.cs
-C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\InputPopupWindow.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\MainWindow.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\ResultPage.g.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\App.g.cs
@@ -87,13 +85,11 @@ C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Proj
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\bin\Debug\netcoreapp3.1\Software-Projekt.pdb
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\AnalyseWindow.baml
-C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\CSVPopupWindow.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\DataDescriptionPage.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\DataPage.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\Indicators.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\IndicatorSelectionPage.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\IndicatorsPopup.baml
-C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\InputPopupWindow.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\MainWindow.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\ResultPage.baml
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\Software-Projekt.g.resources
@@ -102,3 +98,7 @@ C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Proj
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\Software-Projekt.AssemblyInfo.cs
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\Software-Projekt.csproj.CoreCompileInputs.cache
 C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\Software-Projekt.genruntimeconfig.cache
+C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\CSVPage.g.cs
+C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\InputPage.g.cs
+C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\CSVPage.baml
+C:\Users\Sören\Documents\GitHub\Software-Projekt\Software-Projekt\Software-Projekt\obj\Debug\netcoreapp3.1\View\InputPage.baml

@@ -21,6 +21,7 @@ namespace Software_Projekt.View
         public ResultPage()
         {
             InitializeComponent();
+            ViewModel.ViewModelCalculation vmlCalculation = new ViewModel.ViewModelCalculation("Path", "Indicator",1);
         }
 
         private void OnClickEnd(object sender, RoutedEventArgs e)

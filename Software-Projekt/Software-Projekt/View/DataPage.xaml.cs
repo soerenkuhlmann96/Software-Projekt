@@ -24,16 +24,14 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
-        private void OnOpenCSVPopup(object sender, RoutedEventArgs e)
+        private void OnOpenCSVPage(object sender, RoutedEventArgs e)
         {
-            var PopupWindow = new CSVPopupWindow();
-            PopupWindow.ShowDialog();
+            this.NavigationService.Navigate(new Uri("/View/CSVPage.xaml", UriKind.Relative));
         }
 
-        private void OnOpenDataDiscriptionPopup(object sender, RoutedEventArgs e)
+        private void OnOpenInputPage(object sender, RoutedEventArgs e)
         {
-            var PopupWindow = new InputPopupWindow();
-            PopupWindow.ShowDialog();
+            this.NavigationService.Navigate(new Uri("/View/InputPage.xaml", UriKind.Relative));
         }
 
         private void OnClickGoBackToMainWindow(object sender, RoutedEventArgs e)
@@ -47,11 +45,6 @@ namespace Software_Projekt.View
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        private void OnClickContiue(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("/View/DataDescriptionPage.xaml", UriKind.Relative));
         }
     }
 }

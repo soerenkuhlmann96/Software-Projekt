@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:Software_Projekt.View"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      x:Name="IndicatorSelection"
       Title="IndicatorSelectionPage">
 
     <Grid>
@@ -26,9 +27,18 @@
         </Menu>
         <StackPanel Grid.Row="1">
             <Label Content="Kennzahlenauswahl" HorizontalAlignment="Center" FontSize="28"/>
-            <ListBox>
-                <!-- Liste mit Buttons der Kennzahlen -->
+            <ListBox  Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Path=IndicatorsNominal}" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Button Content="{Binding}" Click="OnSelectIndicator"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
+            <ItemsControl ItemsSource="{Binding ElementName=IndicatorSelection}">
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Margin="10,10,10,10">
+                    <TextBlock Text="{Binding ElementName=IndicatorSelection, Path=ChoosenIndicator}" HorizontalAlignment="Center" Margin="10,10,10,10"/>                    <!-- {Binding }-->
+                </Border>
+            </ItemsControl>
             <Button Content="Weiter" Width="60" Click="OnClickContinue"/>
         </StackPanel>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
