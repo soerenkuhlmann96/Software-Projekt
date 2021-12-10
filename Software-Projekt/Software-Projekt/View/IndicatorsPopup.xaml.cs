@@ -37,6 +37,8 @@ namespace Software_Projekt.View
             get => indicatorInfo;
             set => OnPropertyChanged<string>(ref indicatorInfo, value);
         }
+
+        //Speichert die übergebenen Werten in Variablen um sie anzuzeigen
         public IndicatorsPopup(IndicatorInformations info)
         {
             InitializeComponent();
@@ -46,6 +48,8 @@ namespace Software_Projekt.View
             IndicatorCalculations = info.IndicatorCalculations;
             IndicatorInfo = info.IndicatorsInfo;
         }
+
+        //Aktualisiert geänderte Daten im Fenster
         private void OnPropertyChanged<T>(ref T variable, T value, [CallerMemberName] string propertyName = null)
         {
             variable = value;

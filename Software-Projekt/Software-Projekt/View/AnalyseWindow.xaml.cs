@@ -14,10 +14,5 @@ namespace Software_Projekt.View
         {
             InitializeComponent();
         }
-
-        public void CloseWindow(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
     }
 }

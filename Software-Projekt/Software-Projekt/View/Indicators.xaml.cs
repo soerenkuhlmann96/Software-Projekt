@@ -11,9 +11,6 @@ namespace Software_Projekt
     /// </summary>
     public partial class Indicators : Window
     {
-        //Property to save button content
-
-
 
         public Indicators()
         {
@@ -21,11 +18,7 @@ namespace Software_Projekt
             
         }
 
-        private void OnOpenMainwindow(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        //Öffnet PopupFenster mit Nominalen Kennzahl
         private void OnOpenPopupNominal(object sender, RoutedEventArgs e)
         {
             ViewModel.ViewModel vm = new ViewModel.ViewModel();
@@ -36,6 +29,7 @@ namespace Software_Projekt
             PopupWindow.ShowDialog();
         }
 
+        //Öffnet PopupFenster mit Ordinalen Kennzahl
         private void OnOpenPopupOrdinal(object sender, RoutedEventArgs e)
         {
             ViewModel.ViewModel vm = new ViewModel.ViewModel();
@@ -46,6 +40,7 @@ namespace Software_Projekt
             PopupWindow.ShowDialog();
         }
 
+        //Öffnet PopupFenster mit Metrischer Kennzahl
         private void OnOpenPopupMetrisch(object sender, RoutedEventArgs e)
         {
             ViewModel.ViewModel vm = new ViewModel.ViewModel();
@@ -56,6 +51,7 @@ namespace Software_Projekt
             PopupWindow.ShowDialog();
         }
 
+        //Schließt aktuelles Fenster und öffnet Hauptfenster
         private void OnClickBack(object sender, RoutedEventArgs e)
         {
             var MainWindow = new MainWindow();
@@ -64,6 +60,7 @@ namespace Software_Projekt
 
         }
 
+        //Beendet Programm
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             this.Close();

@@ -12,22 +12,15 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True" Grid.Row="0">
-            <MenuItem Header="_Datei">
-                <MenuItem Header="_Öffnen" InputGestureText="Strg+N"/>
-                <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
-            </MenuItem>
-        </Menu>
-        <StackPanel HorizontalAlignment="Center" Grid.Row="1" Margin="0,20,0,20">
-            <TextBlock Text="Anzahl Zahlenreihen" Margin="0,0,0,10"/>
+        <TextBlock Text="CSV Einlesen" HorizontalAlignment="Center" FontSize="32" Margin="0,10,0,0"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,20">
+            <TextBlock Text="Anzahl Zahlenreihen:" Margin="0,0,0,10"/>
             <ComboBox SelectedIndex="0" x:Name="Amount">
                 <ComboBoxItem Content="1"/>
                 <ComboBoxItem Content="2"/>
@@ -36,12 +29,13 @@
             </ComboBox>
 
             <Button Content="Datei öffnen" Click="OnOpenFile" Margin="0,10,0,10"/>
+            <Label Content="Dateipfad:"/>
             <ItemsControl ItemsSource="{Binding ElementName=CSVInputPage}">
                 <TextBox Text="{Binding ElementName=CSVInputPage, Path=Path}" IsReadOnly="True" Width="200"/>
             </ItemsControl>
         </StackPanel>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center">
-            <Button Content="Weiter" Margin="0,10,10,10" Click="OnClickContinue"/>
+            <Button Content="Weiter" Margin="0,10,0,10" Click="OnClickContinue"/>
             <StackPanel Orientation="Horizontal">
                 <Button Content="Zurück" Margin="0,10,10,10" Click="OnClickGoBack"/>
                 <Button Content="Beenden" Margin="10,10,0,10" Click="OnClickEnd"/>

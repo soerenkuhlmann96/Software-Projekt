@@ -1,18 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Software_Projekt.View
 {
@@ -26,6 +12,7 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
+        //Öffnet neues Analyse Fenster und schließt MainWindow 
         private void OnAnalyseFile(object sender, RoutedEventArgs e)
         {
             var Analyse_Window = new AnalyseWindow();
@@ -33,6 +20,7 @@ namespace Software_Projekt.View
             this.Close();
         }
 
+        //Öffnet neues Indicators Fenster und schließt MainWindow
         private void OnOpenIndicators(object sender, RoutedEventArgs e)
         {
             var IndicatorsWindow = new Indicators();
@@ -41,6 +29,7 @@ namespace Software_Projekt.View
             
         }
 
+        //Beendet das Programm
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             this.Close();

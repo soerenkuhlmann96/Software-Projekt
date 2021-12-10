@@ -24,16 +24,19 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
+        //Öffnet CSV Einlese Seite (CSVPage)
         private void OnOpenCSVPage(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/CSVPage.xaml", UriKind.Relative));
         }
 
+        //Öffnet manuelle Eingabe Seite(Inputpage)
         private void OnOpenInputPage(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/InputPage.xaml", UriKind.Relative));
         }
 
+        //Öffnet Hauptfenster und schließt aktuelles Fenster
         private void OnClickGoBackToMainWindow(object sender, RoutedEventArgs e)
         {
             var mainwindow = new MainWindow();
@@ -42,6 +45,7 @@ namespace Software_Projekt.View
             ViewModel.ViewModel.CloseWIndowUsingIdentifier(tag);
         }
 
+        //Beendet Programm
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

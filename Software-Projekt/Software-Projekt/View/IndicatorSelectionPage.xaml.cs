@@ -39,6 +39,7 @@ namespace Software_Projekt.View
             ShowListBox();
         }
 
+        //Fügt der ListBox Buttons mit Kennzahlen des Ausgewählten Skalentyps hinzu 
         private void ShowListBox()
         {
             ChoosenScaleType = (App.Current as App).Skalentyp;
@@ -79,30 +80,32 @@ namespace Software_Projekt.View
             }
         }
 
-        // Close Application
+        // Beendet Programm
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        // Go to next Page
+        // Öffnet nächste Seite (ResultPage)
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/ResultPage.xaml", UriKind.Relative));
             (App.Current as App).ChoosenIndicator = ChoosenIndicator;
         }
 
-        // Go back to Previous Page
+        // Öffnet vorheriges Fenster (DataDescriptionPage)
         private void OnClickBack(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/DataDescriptionPage.xaml", UriKind.Relative));
         }
 
+        //Speichert ausgewählte Kennzahl in der Variablen ChoosenIndicator
         private void OnSelectIndicator(object sender, RoutedEventArgs e)
         {
             ChoosenIndicator = (sender as System.Windows.Controls.Button).Content.ToString();
         }
 
+        //Aktualisiert geänderte Daten im Fenster
         private void OnPropertyChanged<T>(ref T variable, T value, [CallerMemberName] string propertyName = null)
         {
             variable = value;

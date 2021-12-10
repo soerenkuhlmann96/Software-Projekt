@@ -15,31 +15,70 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <Label Content="Anzahl Zahlenreihen"/>
-            <ComboBox SelectedIndex="0">
-                <ComboBoxItem Content="1"/>
-                <ComboBoxItem Content="2"/>
-                <ComboBoxItem Content="3"/>
-            </ComboBox>
+
+        <TextBlock Text="Manuelle Eingabe" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Anzahl Zahlenreihen: "/>
+                <ComboBox SelectedIndex="0" x:Name="ComboboxAmount" Width="100" HorizontalAlignment="Left" SelectionChanged="OnComboboxAmountSelectionChanged">
+                    <ComboBoxItem Content="1" />
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                </ComboBox>
+            </StackPanel>
+            
             <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
                 <TextBlock Text="Zahlenreihe eingeben:" Margin="0,0,5,0"/>
-                <TextBox Width="300"/>
+                <TextBox Width="300" x:Name="TextBox1"/>
                 <ComboBox SelectedIndex="0">
                     <ComboBoxItem Content="Zahlenreihe"/>
                     <ComboBoxItem Content="andere Möglichkeit"/>
                     <ComboBoxItem Content="andere Möglichkeit"/>
                 </ComboBox>
             </StackPanel>
-            <Button Content="Weiter" HorizontalAlignment="Center" Click="OnClickContinue"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Visibility="Collapsed" x:Name="Stackpanel1">
+                <TextBlock Text="Zahlenreihe eingeben:" Margin="0,0,5,0"/>
+                <TextBox Width="300" x:Name="TextBox2"/>
+                <ComboBox SelectedIndex="0">
+                    <ComboBoxItem Content="Zahlenreihe"/>
+                    <ComboBoxItem Content="andere Möglichkeit"/>
+                    <ComboBoxItem Content="andere Möglichkeit"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Visibility="Collapsed" x:Name="Stackpanel2">
+                <TextBlock Text="Zahlenreihe eingeben:" Margin="0,0,5,0"/>
+                <TextBox Width="300" x:Name="TextBox3"/>
+                <ComboBox SelectedIndex="0">
+                    <ComboBoxItem Content="Zahlenreihe"/>
+                    <ComboBoxItem Content="andere Möglichkeit"/>
+                    <ComboBoxItem Content="andere Möglichkeit"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Visibility="Collapsed" x:Name="Stackpanel3">
+                <TextBlock Text="Zahlenreihe eingeben:" Margin="0,0,5,0"/>
+                <TextBox Width="300" x:Name="TextBox4"/>
+                <ComboBox SelectedIndex="0">
+                    <ComboBoxItem Content="Zahlenreihe"/>
+                    <ComboBoxItem Content="andere Möglichkeit"/>
+                    <ComboBoxItem Content="andere Möglichkeit"/>
+                </ComboBox>
+            </StackPanel>
+            
         </StackPanel>
-        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,30,0,0">
-            <Button Content="Zurück" Margin="0,10,10,10" Click="OnClickGoBackToMainWindow"/>
-            <Button Content="Beenden" Margin="10,10,0,10" Click="OnClickEnd"/>
+        <StackPanel Grid.Row="2">
+            <Button Content="Weiter" HorizontalAlignment="Center" Click="OnClickContinue"/>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,30,0,0">
+                <Button Content="Zurück" Margin="0,10,10,10" Click="OnClickGoBack"/>
+                <Button Content="Beenden" Margin="10,10,0,10" Click="OnClickEnd"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

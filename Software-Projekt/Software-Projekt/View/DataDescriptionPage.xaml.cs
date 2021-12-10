@@ -26,11 +26,13 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
+        //Beendet Programm
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        //öffnet nächste Seite (IndicatorSelectionPage) und Speichert die Datenbeschreibung in der App.xaml.cs
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
@@ -41,21 +43,25 @@ namespace Software_Projekt.View
             (App.Current as App).Skalentyp = ComboboxScaleType.Text;
         }
 
+        //Öffnet vorherige Seite (DataPage)
         private void OnClickBack(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/DataPage.xaml", UriKind.Relative));
         }
 
+        //Ändert gespeicherten SKalentyp auf "Intervallskala
         private void OnCheckIntervallskala(object sender, RoutedEventArgs e)
         {
             MetricScaleType = "Intervallskala";
         }
 
+        //Ändert gespeicherten SKalentyp auf Verhältnisskala
         private void OnCheckVerhältnisskala(object sender, RoutedEventArgs e)
         {
             MetricScaleType = "Verhältnisskala";
         }
 
+        //Ändert gespeicherten SKalentyp auf Absolutskala
         private void OnCheckAbsolutskala(object sender, RoutedEventArgs e)
         {
             MetricScaleType = "Absolutskala";

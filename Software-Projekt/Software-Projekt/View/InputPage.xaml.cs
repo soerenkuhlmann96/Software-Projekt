@@ -32,14 +32,43 @@ namespace Software_Projekt.View
             Application.Current.Shutdown();
         }
 
-        private void OnClickBack(object sender, RoutedEventArgs e)
+        private void OnClickGoBack(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/DataPage.xaml", UriKind.Relative));
         }
 
-        private void OnClickGoBackToMainWindow(object sender, RoutedEventArgs e)
+        private void OnComboboxAmountSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            string text = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content as string;
 
+
+            if (text == "1")
+            {
+                if (Stackpanel1 != null) //Bei initialisierung ist Stackpanel1 null. Es würde eine Fehlermeldung geben.
+                {
+                Stackpanel1.Visibility = Visibility.Collapsed;
+                Stackpanel2.Visibility = Visibility.Collapsed;
+                Stackpanel3.Visibility = Visibility.Collapsed;                    
+                }
+            }
+            else if (text == "2")
+            {
+                Stackpanel1.Visibility = Visibility.Visible;
+                Stackpanel2.Visibility = Visibility.Collapsed;
+                Stackpanel3.Visibility = Visibility.Collapsed;
+            }
+            else if (text == "3")
+            {
+                Stackpanel1.Visibility = Visibility.Visible;
+                Stackpanel2.Visibility = Visibility.Visible;
+                Stackpanel3.Visibility = Visibility.Collapsed;
+            }
+            else if (text == "4")
+            {
+                Stackpanel1.Visibility = Visibility.Visible;
+                Stackpanel2.Visibility = Visibility.Visible;
+                Stackpanel3.Visibility = Visibility.Visible;
+            }
         }
     }
 }

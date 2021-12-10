@@ -15,17 +15,13 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True" Grid.Row="0">
-            <MenuItem Header="_Datei">
-                <MenuItem Header="_Öffnen" InputGestureText="Strg+N"/>
-                <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
-            </MenuItem>
-        </Menu>
-            <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+
+        <TextBlock Text="Ergebnis" FontSize="32" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
         <ItemsControl ItemsSource="{Binding ElementName=Result}">
             <TextBlock Text="{Binding ElementName=Result, Path=ResultText}"/>
             <TextBlock Text="{Binding ElementName=Result, Path=InfoText}"/>

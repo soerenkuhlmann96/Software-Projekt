@@ -9,23 +9,16 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True" Grid.Row="0" Grid.ColumnSpan="2">
-            <MenuItem Header="_Datei">
-                <MenuItem Header="_Analysieren" Click="OnAnalyseFile" InputGestureText="Strg+N"/>
-                <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
-            </MenuItem>
-        </Menu>
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+        
+        <StackPanel>
             <TextBlock  Text="Statistik-Trainer" FontSize="50" HorizontalAlignment="Center" Margin="20"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="1">
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Analysieren" Click="OnAnalyseFile"/>
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Kennzahlen" Click="OnOpenIndicators"/>
             <Button Style="{StaticResource ResourceKey=ButtonStyle}" Content="Verlassen" Click="OnClickEnd"/>

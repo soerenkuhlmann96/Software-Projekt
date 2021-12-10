@@ -16,42 +16,18 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True" Grid.Row="0">
-            <MenuItem Header="_Datei">
-                <MenuItem Header="_Öffnen" InputGestureText="Strg+N"/>
-                <MenuItem Header="_Beenden" InputGestureText="alt+f4"/>
-            </MenuItem>
-        </Menu>
-        <StackPanel Grid.Row="1">
+
+        <StackPanel>
             <Label Content="Kennzahlenauswahl" HorizontalAlignment="Center" FontSize="28"/>
         </StackPanel>
-        
-        <ListBox Grid.Row="2" HorizontalContentAlignment="Stretch" Background="Transparent" x:Name="ListBox">
 
-        </ListBox>
-        <!--
-        <ListBox Grid.Row="2" ItemsSource="{Binding Path=IndicatorsOrdinal}" HorizontalContentAlignment="Stretch" Background="Transparent" x:Name="ListBoxOrdinal">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Button Content="{Binding Path=Name}" Click="OnSelectIndicator" Width="300"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        
-        <ListBox Grid.Row="2" ItemsSource="{Binding Path=IndicatorsMetrisch}" HorizontalContentAlignment="Stretch" Background="Transparent" x:Name="ListBoxMetrisch">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Button Content="{Binding Path=Name}" Click="OnSelectIndicator" Width="300"/>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        -->
-        <StackPanel Grid.Row="3">
+        <ListBox Grid.Row="1" HorizontalContentAlignment="Stretch" Background="Transparent" x:Name="ListBox"/>
+
+        <StackPanel Grid.Row="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Ausgewählte Kennzahl:" VerticalAlignment="Center" FontSize="20"/>
             <ItemsControl ItemsSource="{Binding ElementName=IndicatorSelection}">
@@ -62,7 +38,7 @@
             </StackPanel>
             <Button Content="Weiter" Width="60" Click="OnClickContinue"/>
         </StackPanel>
-        <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button Content="Zurück" Margin="0,10,10,10" Click="OnClickBack"/>
             <Button Content="Beenden" Margin="10,10,0,10" Click="OnClickEnd"/>
         </StackPanel>
