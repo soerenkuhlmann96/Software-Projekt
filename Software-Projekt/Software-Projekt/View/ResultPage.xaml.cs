@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,12 +18,26 @@ namespace Software_Projekt.View
     /// <summary>
     /// Interaktionslogik für ResultPage.xaml
     /// </summary>
-    public partial class ResultPage : Page
+    public partial class ResultPage : Page, INotifyPropertyChanged
     {
+        private string resultText;
+        private string infoText;
+
+        public string InfoText 
+        { 
+            get => infoText;
+            set => OnPropertyChanged<string>(ref infoText, value); 
+        }
+        public string ResultText
+        {
+            get => resultText;
+            set => OnPropertyChanged<string>(ref resultText, value);
+        }
         public ResultPage()
         {
             InitializeComponent();
-            ViewModel.ViewModelCalculation vmlCalculation = new ViewModel.ViewModelCalculation("Path", "Indicator",1);
+            ViewModel.ViewModelCalculation vmCalculation = new ViewModel.ViewModelCalculation("Path", "Indicator",1);
+            ResultText = vmCalculation.Result.ToString();
         }
 
         private void OnClickEnd(object sender, RoutedEventArgs e)
@@ -41,5 +57,11 @@ namespace Software_Projekt.View
         {
             this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
         }
+        private void OnPropertyChanged<T>(ref T variable, T value, [CallerMemberName] string propertyName = null)
+        {
+            variable = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

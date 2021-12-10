@@ -6,12 +6,14 @@ using System.Text;
 
 namespace Software_Projekt
 {
-    public class IndicatorList : ObservableCollection<Indicator>
+    public class IndicatorList : List<Indicator>
     {
-        private static IndicatorList indicators = new IndicatorList();
-        private IndicatorList() { }
-        public static IndicatorList Load(string Path)
+        public IndicatorList()
         {
+        }
+        public IndicatorList Load(string Path)
+        {
+            IndicatorList indicators = new IndicatorList();
             string line;
             string[] columns;
             var reader = new StreamReader(Path);

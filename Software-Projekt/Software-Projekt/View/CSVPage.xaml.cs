@@ -21,6 +21,7 @@ namespace Software_Projekt.View
     /// </summary>
     public partial class CSVPage : Page, INotifyPropertyChanged
     {
+        private List<double[]> DataSeries = new List<double[]>();
         private string path;
         public int amount;
         public string Path
@@ -46,10 +47,9 @@ namespace Software_Projekt.View
             }
             else
             {
-                //DataDescriptionPage page = new DataDescriptionPage(Path);
-                //this.NavigationService.Navigate(page);
                 this.NavigationService.Navigate(new Uri("/view/datadescriptionpage.xaml", UriKind.Relative));
-
+                (App.Current as App).DataSeries = DataSeries;
+                
             }
         }
         private void OnClickGoBack(object sender, RoutedEventArgs e)
@@ -67,6 +67,8 @@ namespace Software_Projekt.View
             if (openFile.ShowDialog() == true)
             {
                 Path = openFile.FileName;
+                ViewModel.ViewModelDataReader reader = new ViewModel.ViewModelDataReader();
+                DataSeries = reader.Load(Path, amount);
             }
         }
         private void OnPropertyChanged<T>(ref T variable, T value, [CallerMemberName] string propertyName = null)

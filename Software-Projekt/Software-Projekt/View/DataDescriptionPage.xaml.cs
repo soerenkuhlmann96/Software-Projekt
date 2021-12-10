@@ -18,14 +18,9 @@ namespace Software_Projekt.View
     /// <summary>
     /// Interaktionslogik für DataDescriptionPage.xaml
     /// </summary>
-    public partial class DataDescriptionPage : Page, INotifyPropertyChanged
+    public partial class DataDescriptionPage : Page
     {
-        private string path;
-        public string Path
-        {
-            get => path;
-            set => OnPropertyChanged<string>(ref path, value);
-        }
+        private string MetricScaleType;
         public DataDescriptionPage()
         {
             InitializeComponent();
@@ -39,17 +34,31 @@ namespace Software_Projekt.View
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
+            (App.Current as App).Merkmalsausprägung = ComboBoxMerkmalsausprägung.Text;
+            (App.Current as App).Ordnung = ComboBoxOrdnung.Text;
+            if (ComboboxScaleType.Text == "Metrisch")
+                (App.Current as App).MetricScaletype = MetricScaleType;
+            (App.Current as App).Skalentyp = ComboboxScaleType.Text;
         }
 
         private void OnClickBack(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/DataPage.xaml", UriKind.Relative));
         }
-        private void OnPropertyChanged<T>(ref T variable, T value, [CallerMemberName] string propertyName = null)
+
+        private void OnCheckIntervallskala(object sender, RoutedEventArgs e)
         {
-            variable = value;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            MetricScaleType = "Intervallskala";
         }
-        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnCheckVerhältnisskala(object sender, RoutedEventArgs e)
+        {
+            MetricScaleType = "Verhältnisskala";
+        }
+
+        private void OnCheckAbsolutskala(object sender, RoutedEventArgs e)
+        {
+            MetricScaleType = "Absolutskala";
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace Software_Projekt.ViewModel
 {
     class ViewModel
     {
-        public IndicatorList IndicatorsNominal { get; set; }
+        public List<Indicator> IndicatorsNominal { get; set; }
         public IndicatorList IndicatorsOrdinal { get; set; }
         public IndicatorList IndicatorsMetrisch { get; set; }
 
@@ -22,11 +22,13 @@ namespace Software_Projekt.ViewModel
             string IndicatorsPathOrdinal = IndicatorsPath + "/Ressourcen/IndicatorsOrdinal.csv";
             string IndicatorsPathMetrisch = IndicatorsPath + "/Ressourcen/IndicatorsMetrisch.csv";
 
-            IndicatorsNominal = IndicatorList.Load(IndicatorsPathNominal);
+            IndicatorList indicators = new IndicatorList();
 
-            IndicatorsOrdinal = IndicatorList.Load(IndicatorsPathOrdinal);
+            IndicatorsNominal = indicators.Load(IndicatorsPathNominal);
 
-            IndicatorsMetrisch = IndicatorList.Load(IndicatorsPathMetrisch);
+            IndicatorsOrdinal = indicators.Load(IndicatorsPathOrdinal);
+
+            IndicatorsMetrisch = indicators.Load(IndicatorsPathMetrisch);
 
 
         }

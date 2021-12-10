@@ -7,10 +7,10 @@ namespace Software_Projekt.ViewModel
 {
     class ViewModelCalculation
     {
+        public double Result;
         double[] data;
         public ViewModelCalculation(string path, string indicator,int amount)
         {
-            double Result;
             Calculation calculation = new Calculation();
             DataReader dataReader= new DataReader();
             dataReader.Load(path, amount);
