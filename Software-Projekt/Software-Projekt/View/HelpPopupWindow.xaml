@@ -1,0 +1,51 @@
+﻿<Window x:Class="Software_Projekt.View.HelpPopupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Software_Projekt.View"
+        mc:Ignorable="d"
+        Title="HelpPopupWindow" Height="450" Width="800" Background="Gray">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Text="Sind die Merkmalsausprägungen Namen oder Zahlen?" FontSize="14"/>
+        <ComboBox SelectedIndex="0" Width="150" HorizontalAlignment="Left" x:Name="Combobox1">
+            <ComboBoxItem Content="Zahlen"/>
+            <ComboBoxItem Content="Namen"/>
+        </ComboBox>
+
+        <StackPanel>
+            <TextBlock Text="Repräsentieren diese eine Ordnung, einen Rang oder haben sie keine Logig und sind eher sowas wie Namen?" Margin="0,10,0,0" FontSize="14"/>
+            <ComboBox SelectedIndex="0" Width="150" HorizontalAlignment="Left"  x:Name="Combobox2">
+                <ComboBoxItem Content="Zahlen"/>
+                <ComboBoxItem Content="Namen"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel>
+            <TextBlock Text="Haben sie einen natürlichen Nullpunkt?" Margin="0,10,0,0" FontSize="14"/>
+            <ComboBox SelectedIndex="0" Width="150" HorizontalAlignment="Left" x:Name="Combobox3">
+                <ComboBoxItem Content="ja"/>
+                <ComboBoxItem Content="Nein"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel>
+            <TextBlock Text="Haben sie eine natürliche Einheit?" Margin="0,10,0,0" FontSize="14"/>
+            <ComboBox SelectedIndex="0" Width="150" HorizontalAlignment="Left"  x:Name="Combobox4">
+                <ComboBoxItem Content="Ja"/>
+                <ComboBoxItem Content="Nein"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel>
+            <TextBlock Text="Wird ein oder werden zwei Merkmale beobachtet?" Margin="0,10,0,0" FontSize="14"/>
+            <ComboBox SelectedIndex="0" Width="150" HorizontalAlignment="Left"  x:Name="Combobox5">
+                <ComboBoxItem Content="Ein Merkmal"/>
+                <ComboBoxItem Content="Zwei Merkmale"/>
+            </ComboBox>
+        </StackPanel>
+        
+        <Button Content="OK" Width="50" Margin="50,20,0,0" Click="OnClickConfirm" HorizontalAlignment="Left"/>
+    </StackPanel>
+</Window>

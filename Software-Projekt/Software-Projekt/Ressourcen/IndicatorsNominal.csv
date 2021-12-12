@@ -1,34 +1,7 @@
-﻿Absolute Häufigkeitsverteilung;h(xj) = hj;Aus der Statistik ablesen bzw. durch die Auszählung der beobachteten Ausprägungen aus der gegebenen Statistik erhält man die absolute Häufigkeitsverteilung von X. ;Auf alle Daten Anwendbar
-Kummulierte absolute Häufigkeitsverteilung;H(xj) = Hj;Alle absoluten Häufigkeitsverteilungen werden je Zeile immer jeweils aufeinander addiert. Wenn alle absoluten Häufigkeiten der jeweiligen Ausprägungen aufeinander addiert wurden, müsste  Erhebungsmasse sein.;Auf alle Daten anwendbar 
-Relative Häufigkeitsverteilung;f(xj) = fj;Text3;Ordinal oder kardinal, metrisch 
-kumulierte relative Häufigkeitsverteilung ;x+4;Text4;info4
-Median;x+5;Text5;Ordinal oder kardinal metrisch
-Quantil;x+6;Text6;Ordinal oder kardinal metrisch 
-Arithmetisches Mittel;x+7;Text7;Metrisch messbar 
-Geometrisches Mittel;x+8;Text8;Verhätnissskala positive ausprägung 
-Spannweite;x+9;Text9;info9
-Quantilsabstand;x+10;Text10;info10
-Varianz;x+11;Text11;info11
-Standardabweichung;x+12;Text12;info12
-Variationskoeffizient;x+13;Text13;info13
-Merkmalssumme;x+14;Text14;info14
-Anteilswerte;x+15;Text15;info15
-Absolutes Konzentrationsmaß;x+16;Text16;info16
-Lorenzkurve;x+17;Text17;info17
-Gini Maß;x+18;Text18;info18
-Randverteilung;x+19;Text19;info19
-Kontingenztabelle;x+20;Text20;info20
-Chi-Quadrat;x+21;Text21;info21
-Kontingenzmaß nach Cramér;x+22;Text22;info22
-Kovarianz;x+23;Text23;info23
-Pearson’scher Korrelationskoeffizient;x+24;Text24;info24
-Rangzahl;x+25;Text25;info25
-Spearman’scher Rangkorrelationskoeffizient;x+26;Text26;info26
-Einfache Lineare Regresion;x+27;Text27;info27
-Güte der Regression;x+28;Text28;info28
-Bestimmtheitsmaß;x+29;Text29;info29
-Wertindex;x+30;Text30;info30
-Preisindex nach Laspeyres;x+31;Text31;info31
-Preisindex nach Paasche;x+32;Text32;info32
-Mengenindex nach Laspeyres;x+33;Text33;info33
-Mengenindex nach Paasche;x+34;Text34;info34
+﻿Absolute Häufigkeitsverteilung;h(χⱼ)=hⱼ;0;0
+Kumulierte absolute Häufigkeitsverteilung;H(χⱼ)=Hⱼ;0;0
+Relative Häufigkeitsverteilung;ƒ(χⱼ)=ƒⱼ;0;0
+Kumulierte relative Häufigkeitsverteilung;Ƒ(χⱼ)=Ƒⱼ;0;0
+Modus;x̅ᴅ;0;0
+Chi-Quadrat;X²;0;0
+Kontingenzmaß nach Cramér;V;0;0

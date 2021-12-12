@@ -9,11 +9,11 @@ namespace Software_Projekt.ViewModel
     {
         public double Result;
         double[] data;
-        public ViewModelCalculation(string path, string indicator,int amount)
+        public ViewModelCalculation(List<double[]> DataSeries, string indicator)
         {
             Calculation calculation = new Calculation();
-            DataReader dataReader= new DataReader();
-            dataReader.Load(path, amount);
+            
+            //dataReader.Load(path, amount);
             
             switch(indicator)
             {

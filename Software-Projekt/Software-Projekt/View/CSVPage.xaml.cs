@@ -62,11 +62,12 @@ namespace Software_Projekt.View
                 }
                 else
                 {
-                ViewModel.ViewModelDataReader reader = new ViewModel.ViewModelDataReader();
-                DataSeries = reader.Load(Path, amount);
+                    ViewModel.ViewModelDataReader reader = new ViewModel.ViewModelDataReader();
+                    DataSeries = reader.Load(Path, amount);
 
-                this.NavigationService.Navigate(new Uri("/view/datadescriptionpage.xaml", UriKind.Relative));
-                (App.Current as App).DataSeries = DataSeries;
+                    this.NavigationService.Navigate(new Uri("/view/datadescriptionpage.xaml", UriKind.Relative));
+                    (App.Current as App).DataSeries = DataSeries;
+                    (App.Current as App).Amount = amount;
 
                 }
                 

@@ -19,6 +19,9 @@
     <Compile Update="View\DataPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\HelpPopupWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Indicators.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\DataPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\HelpPopupWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Indicators.xaml">

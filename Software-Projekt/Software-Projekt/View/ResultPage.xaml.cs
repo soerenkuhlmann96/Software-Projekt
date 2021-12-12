@@ -20,6 +20,8 @@ namespace Software_Projekt.View
     /// </summary>
     public partial class ResultPage : Page, INotifyPropertyChanged
     {
+        private List<double[]> DataSeries = new List<double[]>(); //Erstellt neue Liste um Daten für Weiterbearbeitung zu speichern
+        private string indicator = (App.Current as App).ChoosenIndicator;
         private string resultText;
         private string infoText;
 
@@ -36,9 +38,12 @@ namespace Software_Projekt.View
         public ResultPage()
         {
             InitializeComponent();
-            ViewModel.ViewModelCalculation vmCalculation = new ViewModel.ViewModelCalculation("Path", "Indicator",1);
+            DataSeries = (App.Current as App).DataSeries;
+            //ViewModel.ViewModelNormalize vmNormalize = new ViewModel.ViewModelNormalize(DataSeries);
+            ViewModel.ViewModelCalculation vmCalculation = new ViewModel.ViewModelCalculation(DataSeries, indicator);
             ResultText = vmCalculation.Result.ToString();
         }
+
 
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {

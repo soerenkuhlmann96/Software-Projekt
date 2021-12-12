@@ -14,11 +14,12 @@ namespace Software_Projekt
     public partial class App : Application
     {
         public List<double[]> DataSeries = new List<double[]>();
-        public string Merkmalsausprägung;
-        public string Ordnung;
+        public string[] DataDescriptor;
         public string Skalentyp;
         public string MetricScaletype;
         public string ChoosenIndicator;
+        public int Amount;
+        public string[] description;
 
     }
 }

@@ -30,29 +30,55 @@
         
         <TextBlock Text="Datenbeschreibung" FontSize="28" HorizontalAlignment="Center" Margin="0,20,0,30"/>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label Content="Merkmalsausprägung" Margin="0,5,0,5"/>
-            <ComboBox SelectedIndex="0" Margin="0,5,0,5" x:Name="ComboBoxMerkmalsausprägung">
-                <ComboBoxItem Content="Zahlen"/>
-                <ComboBoxItem Content="Namen"/>
-            </ComboBox>
-            <Label Content="Gibt es eine Ordnung/Rang?" Margin="0,5,0,5"/>
-            <ComboBox SelectedIndex="0" Margin="0,5,0,5" x:Name="ComboBoxOrdnung">
-                <ComboBoxItem Content="Ja"/>
-                <ComboBoxItem Content="Nein"/>
-            </ComboBox>
-            <Label Content="Skalentyp" Margin="0,5,0,5"/>
 
+            <Label Content="Wählen Sie den Skalentyp aus: " Margin="0,5,0,5"/>
             <ComboBox SelectedIndex="0" x:Name="ComboboxScaleType">
                 <ComboBoxItem Content="Nominal"/>
                 <ComboBoxItem Content="Ordinal"/>
                 <ComboBoxItem Content="Metrisch"/>
             </ComboBox>
+            
             <StackPanel>
                 <RadioButton Content="Intevallskala" Style="{StaticResource RadioButtonStyle}" IsChecked="True" x:Name="Intervallskala" Checked="OnCheckIntervallskala"/>
                 <RadioButton Content="Verhältnisskala" Style="{StaticResource RadioButtonStyle}" x:Name="Verhältnisskala" Checked="OnCheckVerhältnisskala"/>
                 <RadioButton Content="Absolutskala" Style="{StaticResource RadioButtonStyle}" Checked="OnCheckAbsolutskala"/>
             </StackPanel>
+            
+            <Button Content="Hilfe" Margin="0,20,0,0" Width="100" Click="OnClickHelp"/>
+            
+            <StackPanel Margin="0,40,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Erste Zahlenreihe"/>
+                    <ComboBox SelectedIndex="0"  Width="175" Margin="10,0,0,0"  x:Name="ComboBox1">
+                        <ComboBoxItem Content="Zahlenreihe" ToolTip="Die erste Eingabe muss immer eine Zahlenreihe sein"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox2" Visibility="Collapsed">
+                    <Label Content="Erste Zahlenreihe"/>
+                    <ComboBox SelectedIndex="0"  Width="175" Margin="10,0,0,0"  x:Name="ComboBox2">
+                        <ComboBoxItem Content="Zahlenreihe"/>
+                        <ComboBoxItem Content="Absolute Häufigkeitsreihe"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox3" Visibility="Collapsed">
+                    <Label Content="Erste Zahlenreihe"/>
+                    <ComboBox SelectedIndex="0"  Width="175" Margin="10,0,0,0"  x:Name="ComboBox3">
+                        <ComboBoxItem Content="Zahlenreihe"/>
+                        <ComboBoxItem Content="Absolute Häufigkeitsreihe"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox4" Visibility="Collapsed">
+                    <Label Content="Erste Zahlenreihe"/>
+                    <ComboBox SelectedIndex="0" Width="175" Margin="10,0,0,0" x:Name="ComboBox4">
+                        <ComboBoxItem Content="Absolute Häufigkeitsreihe" ToolTip="Bei vier Eingaben müssen zwei Häufigkeitsreihen vorhanden sein"/>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
+        
         <StackPanel Grid.Row="2" Margin="0,10,0,0">
             <Button Content="Weiter" Width="60" Click="OnClickContinue"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">

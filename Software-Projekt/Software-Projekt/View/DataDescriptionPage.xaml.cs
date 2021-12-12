@@ -21,9 +21,13 @@ namespace Software_Projekt.View
     public partial class DataDescriptionPage : Page
     {
         private string MetricScaleType;
+        private int amount;
+        private string[] description;
         public DataDescriptionPage()
         {
             InitializeComponent();
+            amount = (App.Current as App).Amount;
+            ShowChoices();
         }
 
         //Beendet Programm
@@ -36,11 +40,11 @@ namespace Software_Projekt.View
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
-            (App.Current as App).Merkmalsausprägung = ComboBoxMerkmalsausprägung.Text;
-            (App.Current as App).Ordnung = ComboBoxOrdnung.Text;
             if (ComboboxScaleType.Text == "Metrisch")
                 (App.Current as App).MetricScaletype = MetricScaleType;
             (App.Current as App).Skalentyp = ComboboxScaleType.Text;
+            SaveDescription();
+            (App.Current as App).description = description;
         }
 
         //Öffnet vorherige Seite (DataPage)
@@ -65,6 +69,60 @@ namespace Software_Projekt.View
         private void OnCheckAbsolutskala(object sender, RoutedEventArgs e)
         {
             MetricScaleType = "Absolutskala";
+        }
+
+        private void OnClickHelp(object sender, RoutedEventArgs e)
+        {
+            var PopupWindow = new HelpPopupWindow();
+            PopupWindow.ShowDialog();
+            //update Skalentyp
+        }
+        private void ShowChoices()
+        {
+            if (amount == 1)
+            {
+            }
+            else if (amount == 2)
+            {
+                StackPanelCombobox2.Visibility = Visibility.Visible;
+            }
+            else if (amount == 3)
+            {
+                StackPanelCombobox2.Visibility = Visibility.Visible;
+                StackPanelCombobox3.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                StackPanelCombobox2.Visibility = Visibility.Visible;
+                StackPanelCombobox3.Visibility = Visibility.Visible;
+                StackPanelCombobox4.Visibility = Visibility.Visible;
+            }
+        }
+        private void SaveDescription()
+        {
+            Array.Resize(ref description, amount);
+            if (amount == 1)
+            {
+                description[0] = ComboBox1.Text;
+            }
+            else if (amount == 2)
+            {
+                description[0] = ComboBox1.Text;
+                description[1] = ComboBox2.Text;
+            }
+            else if (amount == 3)
+            {
+                description[0] = ComboBox1.Text;
+                description[1] = ComboBox2.Text;
+                description[2] = ComboBox3.Text;
+            }
+            else
+            {
+                description[0] = ComboBox1.Text;
+                description[1] = ComboBox2.Text;
+                description[2] = ComboBox3.Text;
+                description[3] = ComboBox4.Text;
+            }
         }
     }
 }
