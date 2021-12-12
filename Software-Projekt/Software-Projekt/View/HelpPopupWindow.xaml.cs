@@ -22,6 +22,7 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
+        //Speichert das Ergebnis der Fragen in der App.xaml.cs um im Hauptfenster den richtigen Skalentypen anzeigen zu können.
         private void OnClickConfirm(object sender, RoutedEventArgs e)
         {
             if (Combobox1.SelectedIndex == 1)

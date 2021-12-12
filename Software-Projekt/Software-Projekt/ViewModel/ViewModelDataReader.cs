@@ -11,6 +11,7 @@ namespace Software_Projekt.ViewModel
         public ViewModelDataReader()
         {
         }
+        //Öffnet DataReader um Daten einzulesen
         public List<double[]> Load(string path, int amount)
         {
             

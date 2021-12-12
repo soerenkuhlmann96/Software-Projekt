@@ -25,6 +25,8 @@ namespace Software_Projekt.View
             InitializeComponent();
         }
 
+        //Ruft nächste seite auf (DataDescriptionPage) und speichert Eingegebene Daten und Anzahl der Datenreihen in der App.xaml.cs
+        //Bei unausreichender eingabe wird ein Infofenster aufgerufen
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
             if (SaveData() == true) //speichert eingegebene Datenreihen in Variable DataSeries und überprüft ob eingaben gemacht wurden
@@ -45,16 +47,20 @@ namespace Software_Projekt.View
                 MessageBox.Show("Bitte Datenreihen eingeben!");
             }
         }
+
+        //Beendet Programm
         private void OnClickEnd(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        //Ruft vorherige Seite auf(DataPage)
         private void OnClickGoBack(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/View/DataPage.xaml", UriKind.Relative));
         }
 
+        //Aktualisiert Menge der angezeigten Eingabemöglichkeiten
         private void OnComboboxAmountSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string text = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content as string;
@@ -96,6 +102,8 @@ namespace Software_Projekt.View
                 Stackpanel3.Visibility = Visibility.Visible;
             }
         }
+
+        //Speichert Eingegebene Datenreihen in der Variablen DataSeries
         public bool SaveData()
         {
             if (TextBox1.Text == "")

@@ -32,6 +32,8 @@ namespace Software_Projekt.ViewModel
 
 
         }
+
+        //schließt übergebenes Fenster (Für das Schließen vom AnalyseWindow)
         public static void CloseWIndowUsingIdentifier(string windowTag)
         {
             Assembly currentAssembly = Assembly.GetExecutingAssembly();
@@ -44,6 +46,8 @@ namespace Software_Projekt.ViewModel
                 }
             }
         }
+
+        //speichert Informationen über ausgewählte Kennzahl
         public IndicatorInformations SaveIndicator(string name, string list)
         {
             IndicatorInformations indicatorInformation = new IndicatorInformations();

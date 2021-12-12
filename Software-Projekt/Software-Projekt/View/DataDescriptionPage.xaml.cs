@@ -26,7 +26,7 @@ namespace Software_Projekt.View
         public DataDescriptionPage()
         {
             InitializeComponent();
-            amount = (App.Current as App).Amount;
+            amount = (App.Current as App).Amount; //Liest die anzahl der Übergebenen Datenreihen aus der App.xaml.cs
             ShowChoices();
         }
 
@@ -77,6 +77,7 @@ namespace Software_Projekt.View
             PopupWindow.ShowDialog();
             //update Skalentyp
         }
+        //Macht richtige anzahl an Beschreibemöglichkeiten der Daten sichtbar
         private void ShowChoices()
         {
             if (amount == 1)
@@ -98,6 +99,7 @@ namespace Software_Projekt.View
                 StackPanelCombobox4.Visibility = Visibility.Visible;
             }
         }
+        //Speichert Beschreibung der Datenreihen in der App.xaml.cs
         private void SaveDescription()
         {
             Array.Resize(ref description, amount);

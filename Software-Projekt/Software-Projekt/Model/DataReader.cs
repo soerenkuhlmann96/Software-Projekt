@@ -8,6 +8,8 @@ namespace Software_Projekt.Model
     public class DataReader
     {
         private List<double[]> DataSeries = new List<double[]>();
+
+        //Liest CSV Datei in eine Liste von Double Arrays
         public List<double[]> Load(string path, int amount)
         {
             if (!File.Exists(path))

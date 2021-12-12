@@ -42,7 +42,7 @@ namespace Software_Projekt.View
             var mainwindow = new MainWindow();
             mainwindow.Show();
             string tag = "AnalyseWindow";
-            ViewModel.ViewModel.CloseWIndowUsingIdentifier(tag);
+            ViewModel.ViewModel.CloseWIndowUsingIdentifier(tag); //schließt AnalyseWindow
         }
 
         //Beendet Programm

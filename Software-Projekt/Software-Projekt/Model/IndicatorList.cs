@@ -11,6 +11,8 @@ namespace Software_Projekt
         public IndicatorList()
         {
         }
+
+        // Läd Liste von Kennzahlen aus CSV Datein
         public IndicatorList Load(string Path)
         {
             IndicatorList indicators = new IndicatorList();
