@@ -56,9 +56,10 @@ namespace Software_Projekt.View
                 amount = int.Parse(Amount.Text);
 
                 bool check = Check(Path, amount);
+                
                 if (check == false)
                 {
-                    MessageBox.Show("Zu hohe Anzahl von Zahlenreihen");
+                    MessageBox.Show("Es wurden zu viele Zahlenreihen angegeben oder eine Zahlenreihe enthält einen Buchstaben.");
                 }
                 else
                 {
@@ -105,6 +106,17 @@ namespace Software_Projekt.View
                 string[] characters = line.Split(';');
                 if (characters.Length < amount)
                     result = false;
+                foreach (string s in characters)
+                {
+                    foreach (char c in s)
+                    {
+                        if (c != '0' || c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' || c != '8' || c != '9' || c != ',' || c != '.')
+                        {
+                            return false;
+                        }
+                    }
+                }
+
             }
             return result;
         }

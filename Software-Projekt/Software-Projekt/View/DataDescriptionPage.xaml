@@ -41,7 +41,7 @@
             <StackPanel>
                 <RadioButton Content="Intevallskala" Style="{StaticResource RadioButtonStyle}" IsChecked="True" x:Name="Intervallskala" Checked="OnCheckIntervallskala"/>
                 <RadioButton Content="Verhältnisskala" Style="{StaticResource RadioButtonStyle}" x:Name="Verhältnisskala" Checked="OnCheckVerhältnisskala"/>
-                <RadioButton Content="Absolutskala" Style="{StaticResource RadioButtonStyle}" Checked="OnCheckAbsolutskala"/>
+                <RadioButton Content="Absolutskala" Style="{StaticResource RadioButtonStyle}" x:Name="Absolutskala" Checked="OnCheckAbsolutskala"/>
             </StackPanel>
             
             <Button Content="Hilfe" Margin="0,20,0,0" Width="100" Click="OnClickHelp"/>

@@ -9,7 +9,7 @@ namespace Software_Projekt.Model
     class Calculation
     {
         /**************************************/
-        public double GeometrischesMittel(double[] array)
+        public double GeometrischesMittel(double[] array, double[] frequence)
         {
             double xBar_g = 1;
             for (var i = 0; i < array.Length; i++)

@@ -89,8 +89,15 @@ namespace Software_Projekt.View
         // Öffnet nächste Seite (ResultPage)
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
+            if (ChoosenIndicator != "Auswählen")
+            {
             this.NavigationService.Navigate(new Uri("/View/ResultPage.xaml", UriKind.Relative));
             (App.Current as App).ChoosenIndicator = ChoosenIndicator;
+            }
+            else
+            {
+                MessageBox.Show("Bitte Kennzahl auswählen");
+            }
         }
 
         // Öffnet vorheriges Fenster (DataDescriptionPage)

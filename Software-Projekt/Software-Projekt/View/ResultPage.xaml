@@ -23,7 +23,11 @@
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Center">
         <ItemsControl ItemsSource="{Binding ElementName=Result}">
-            <TextBlock Text="{Binding ElementName=Result, Path=ResultText}"/>
+                <TextBlock Text="{Binding ElementName=Result, Path=Indicator}" FontSize="20"/>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Das Ergebnis ist: "/>
+                    <TextBlock Text="{Binding ElementName=Result, Path=ResultText}"/>
+                </StackPanel>
             <TextBlock Text="{Binding ElementName=Result, Path=InfoText}"/>
         </ItemsControl>
         </StackPanel>

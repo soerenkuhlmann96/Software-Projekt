@@ -9,6 +9,9 @@ namespace Software_Projekt.ViewModel
     {
         public double Result;
         double[] data;
+        double[] frequency;
+        double[] frequencyrelativ;
+        public string output;
         public ViewModelCalculation(List<double[]> DataSeries, string indicator)
         {
             Calculation calculation = new Calculation();
@@ -18,20 +21,53 @@ namespace Software_Projekt.ViewModel
             switch(indicator)
             {
                 case "Geometrisches Mittel":
-                    Result = calculation.GeometrischesMittel(data);
-                    break;
+                    if (DataSeries.Count >3)
+                    {
+                        data = DataSeries[0];
+                        frequency = DataSeries[1];
+                        Result = calculation.GeometrischesMittel(data, frequency);
+
+                        output = "Erste Datenreihe: " + Result.ToString();
+
+                        data = DataSeries[3];
+                        frequency = DataSeries[4];
+                        Result = calculation.GeometrischesMittel(data, frequency);
+                        output += " Zweite Datenreihe: " + Result.ToString();
+                        break;
+                    }
+                    else
+                    {
+                        data = DataSeries[0];
+                        frequency = DataSeries[1];
+                        Result = calculation.GeometrischesMittel(data, frequency);
+                        output = Result.ToString();
+                        break;
+                    }
 
                 case "Varianz":
                     Result = calculation.Varianz(data);
-                    break;
+                    if (DataSeries.Count > 3)
+                    {
+                        data = DataSeries[0];
+                        frequency = DataSeries[1];
+                        Result = calculation.GeometrischesMittel(data, frequency);
 
-                case "Häufigkeit":
-                    //Result = calculation.Häufigkeit(data);
-                    break;
+                        output = Result.ToString();
 
-                case "Kumulierte_Häufigkeit":
-                    //Result = calculation.Kumulierte_Häufigkeit(data);
-                    break;
+                        data = DataSeries[3];
+                        frequency = DataSeries[4];
+                        Result = calculation.GeometrischesMittel(data, frequency);
+                        output += " " + Result.ToString();
+                        break;
+                    }
+                    else
+                    {
+                        data = DataSeries[0];
+                        frequency = DataSeries[1];
+                        Result = calculation.GeometrischesMittel(data, frequency);
+                        output = Result.ToString();
+                        break;
+                    }
 
                 case "Absolutehaufigkeit":
                     //Result = calculation.Absolutehaufigkeit(data);

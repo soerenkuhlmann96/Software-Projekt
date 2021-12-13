@@ -20,6 +20,7 @@ namespace Software_Projekt
         public string ChoosenIndicator;
         public int Amount;
         public string[] description;
+        public int ScaletypeIndex;
 
     }
 }

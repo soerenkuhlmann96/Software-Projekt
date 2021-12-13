@@ -8,24 +8,43 @@ namespace Software_Projekt.ViewModel
     class ViewModelNormalize
     {
         private string[] description;
+        public List<double[]> Data = new List<double[]>();
         public ViewModelNormalize(List<double[]> DataSeries)
         {
             description = (App.Current as App).description;
-            Normalize(DataSeries, description);
+            Data = Normalize(DataSeries, description);
         }
         private List<double[]> Normalize(List<double[]> DataSeries, string[] description)
         {
             List<double[]> normalizedList;
 
             double[] r1 = DataSeries[0];
-            double[] r2 = DataSeries[1];
-            double[] r3 = DataSeries[2];
-            double[] r4 = DataSeries[3];
+            double[] r2 = null;
+            double[] r3 = null;
+            double[] r4 = null;
+
+            if (DataSeries.Count == 2)
+                r2 = DataSeries[1];
+            
+            else if (DataSeries.Count == 3)
+            {
+                r2 = DataSeries[1];
+                r3 = DataSeries[2];
+            }
+
+            else if (DataSeries.Count == 4)
+            {
+                r2 = DataSeries[1];
+                r3 = DataSeries[2];
+                r4 = DataSeries[3];
+            }
+
+
             List<double[]> temp;
 
 
 
-            if (description[1] != "Absolutreihe")
+            if (description[1] != "Absolute Häufigkeitsreihe")
             {
 
 
@@ -36,7 +55,7 @@ namespace Software_Projekt.ViewModel
                 }
                 normalizedList = Sorter(r1, absolutreihe1);
                 //mit reihe2 weiter machen für r2
-                if (description[2] != "Absolutreihe")
+                if (description[2] != "Absolute Häufigkeitsreihe" && description[1] != null)
                 {
                     //absolutreihe mit nur einsen erstellen
                     double[] absolutreihe2 = new double[r2.Length];
@@ -45,12 +64,12 @@ namespace Software_Projekt.ViewModel
                         absolutreihe2[i] = 1;
                     }
                     //reihe2 sotieren und beschreibung kriegen
-                    temp = Sorter(r1, absolutreihe1);
+                    temp = Sorter(r2, absolutreihe2);
                     normalizedList[3] = temp[0];
                     normalizedList[4] = temp[1];
                     normalizedList[5] = temp[2];
                 }
-                else
+                else if (description[1] != null)
                 {
                     //reihe2 sotieren und beschreibung kriegen für r2
                     temp = Sorter(r2, r3);
@@ -64,7 +83,7 @@ namespace Software_Projekt.ViewModel
                 //reihe1 sotieren und beschreibung kriegen für r1
                 normalizedList = Sorter(r1, r2);
                 //mit reihe2 weiter machen für r3
-                if (description[3] != "Absolutreihe")
+                if (description[3] != "Absolute Häufigkeitsreihe" && description[3] != null)
                 {
                     //absolutreihe mit nur einsen erstellen
                     double[] absolutreihe2 = new double[r3.Length];
@@ -78,7 +97,7 @@ namespace Software_Projekt.ViewModel
                     normalizedList[4] = temp[1];
                     normalizedList[5] = temp[2];
                 }
-                else
+                else if (description[3] != null)
                 {
                     //reihe2 sotieren und beschreibung kriegen für r3
                     temp = Sorter(r3, r4);

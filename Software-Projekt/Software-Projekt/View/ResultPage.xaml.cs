@@ -21,7 +21,7 @@ namespace Software_Projekt.View
     public partial class ResultPage : Page, INotifyPropertyChanged
     {
         private List<double[]> DataSeries = new List<double[]>(); //Erstellt neue Liste um Daten für Weiterbearbeitung zu speichern
-        private string indicator = (App.Current as App).ChoosenIndicator;
+        private string indicator;
         private string resultText;
         private string infoText;
 
@@ -35,13 +35,20 @@ namespace Software_Projekt.View
             get => resultText;
             set => OnPropertyChanged<string>(ref resultText, value);
         }
+        public string Indicator
+        {
+            get => indicator;
+            set => OnPropertyChanged<string>(ref indicator, value);
+        }
         public ResultPage()
         {
             InitializeComponent();
             DataSeries = (App.Current as App).DataSeries;
-            //ViewModel.ViewModelNormalize vmNormalize = new ViewModel.ViewModelNormalize(DataSeries);
+            Indicator = (App.Current as App).ChoosenIndicator;
+            ViewModel.ViewModelNormalize vmNormalize = new ViewModel.ViewModelNormalize(DataSeries);
+            DataSeries = vmNormalize.Data;
             ViewModel.ViewModelCalculation vmCalculation = new ViewModel.ViewModelCalculation(DataSeries, indicator);
-            ResultText = vmCalculation.Result.ToString();
+            ResultText = vmCalculation.output;
         }
 
 

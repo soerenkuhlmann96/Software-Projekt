@@ -22,7 +22,7 @@ namespace Software_Projekt.View
     {
         private string MetricScaleType;
         private int amount;
-        private string[] description;
+        private string[] description = new string[4];
         public DataDescriptionPage()
         {
             InitializeComponent();
@@ -75,8 +75,33 @@ namespace Software_Projekt.View
         {
             var PopupWindow = new HelpPopupWindow();
             PopupWindow.ShowDialog();
-            //update Skalentyp
+            ComboboxScaleType.SelectedIndex = (App.Current as App).ScaletypeIndex; //Updatet Skalentyp
+            if (ComboboxScaleType.SelectedIndex == 2) //Updatet Metrische Skalentyp
+                UpdateMetricScaleType();
         }
+
+        private void UpdateMetricScaleType()
+        {
+            if ((App.Current as App).MetricScaletype == "Intervallskala")
+            {
+                Intervallskala.IsChecked = true;
+                Verhältnisskala.IsChecked = false;
+                Absolutskala.IsChecked = false;
+            }
+            else if ((App.Current as App).MetricScaletype == "Verhältnisskala")
+            {
+                Intervallskala.IsChecked = false;
+                Verhältnisskala.IsChecked = true;
+                Absolutskala.IsChecked = false;
+            }
+            else
+            {
+                Intervallskala.IsChecked = false;
+                Verhältnisskala.IsChecked = false;
+                Absolutskala.IsChecked = true;
+            }
+        }
+
         //Macht richtige anzahl an Beschreibemöglichkeiten der Daten sichtbar
         private void ShowChoices()
         {
@@ -102,21 +127,26 @@ namespace Software_Projekt.View
         //Speichert Beschreibung der Datenreihen in der App.xaml.cs
         private void SaveDescription()
         {
-            Array.Resize(ref description, amount);
             if (amount == 1)
             {
                 description[0] = ComboBox1.Text;
+                description[1] = null;
+                description[2] = null;
+                description[3] = null;
             }
             else if (amount == 2)
             {
                 description[0] = ComboBox1.Text;
                 description[1] = ComboBox2.Text;
+                description[2] = null;
+                description[3] = null;
             }
             else if (amount == 3)
             {
                 description[0] = ComboBox1.Text;
                 description[1] = ComboBox2.Text;
                 description[2] = ComboBox3.Text;
+                description[3] = null;
             }
             else
             {
