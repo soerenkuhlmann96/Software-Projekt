@@ -56,22 +56,29 @@ namespace Software_Projekt.View
                 amount = int.Parse(Amount.Text);
 
                 bool check = Check(Path, amount);
-                
+                bool check2 = Check2(Path);
+
                 if (check == false)
                 {
-                    MessageBox.Show("Es wurden zu viele Zahlenreihen angegeben oder eine Zahlenreihe enthält einen Buchstaben.");
+                    MessageBox.Show("Es wurden zu viele Zahlenreihen angegeben.");
                 }
                 else
                 {
-                    ViewModel.ViewModelDataReader reader = new ViewModel.ViewModelDataReader();
-                    DataSeries = reader.Load(Path, amount);
+                    if (check2 == false)
+                    {
+                        MessageBox.Show("Es wurde ein oder mehrere Buchstaben in den Zahlenreihen angegeben.");
+                    }
 
-                    this.NavigationService.Navigate(new Uri("/view/datadescriptionpage.xaml", UriKind.Relative));
-                    (App.Current as App).DataSeries = DataSeries;
-                    (App.Current as App).Amount = amount;
+                    else
+                    {
+                        ViewModel.ViewModelDataReader reader = new ViewModel.ViewModelDataReader();
+                        DataSeries = reader.Load(Path, amount);
 
+                        this.NavigationService.Navigate(new Uri("/view/datadescriptionpage.xaml", UriKind.Relative));
+                        (App.Current as App).DataSeries = DataSeries;
+                        (App.Current as App).Amount = amount;
+                    }
                 }
-                
             }
         }
 
@@ -106,19 +113,41 @@ namespace Software_Projekt.View
                 string[] characters = line.Split(';');
                 if (characters.Length < amount)
                     result = false;
-                foreach (string s in characters)
+            }
+            return result;
+        }
+
+        //überprüft ob in der Datei nur Zahlen angegeben wurden
+        private bool Check2(string Path)
+        {
+            bool result = true;
+
+            using (StreamReader reader = new StreamReader(Path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    foreach (char c in s)
+                    string[] characters = line.Split(';');
+                    foreach (string s in characters)
                     {
-                        if (c != '0' || c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' || c != '8' || c != '9' || c != ',' || c != '.')
+                        foreach (char c in s)
                         {
-                            return false;
+                            if (IsLetter(c) == true)
+                            {
+                                return false;
+                            }
                         }
                     }
                 }
-
             }
             return result;
+        }
+
+        //Vergleicht übergebenen Character mit Buchstaben
+        bool IsLetter(char c)
+        {
+            return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
+
         }
 
         //Aktualisiert geänderte Daten im Fenster

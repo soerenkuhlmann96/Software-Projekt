@@ -109,18 +109,17 @@ namespace Software_Projekt.View
             
             if (TextBox1.Text == "")
                 return false;
+            double[] series = new double[0];
+            string text;
+            string[] seperatedText;
 
             foreach (char c in TextBox1.Text)
             {
-                if (c != '0' || c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' || c != '8' || c != '9' || c != ',' || c != ';' || c != '.')
+                if (IsLetter(c) == true)
                 {
                     return false;
                 }
             }
-
-            double[] series = new double[0];
-            string text;
-            string[] seperatedText;
 
             text = TextBox1.Text;
             seperatedText = text.Split(';');
@@ -130,18 +129,20 @@ namespace Software_Projekt.View
                 series[i] = double.Parse(seperatedText[i]);
             }
 
+            foreach (char c in TextBox2.Text)
+            {
+                if (IsLetter(c) == true)
+                {
+                    return false;
+                }
+            }
+
             DataSeries.Add(series);
             if (amount > 1)
             {
                 if (TextBox2.Text == "")
                     return false;
-                foreach (char c in TextBox2.Text)
-                {
-                    if (c != '0' || c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' || c != '8' || c != '9' || c != ',' || c != ';' || c != '.')
-                    {
-                        return false;
-                    }
-                }
+
 
                 Array.Resize(ref series, 0);
 
@@ -157,10 +158,10 @@ namespace Software_Projekt.View
             if (amount > 2)
             {
                 if (TextBox3.Text == "")
-                    return false; 
+                    return false;
                 foreach (char c in TextBox3.Text)
                 {
-                    if (c != '0' || c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' || c != '8' || c != '9' || c != ',' || c != ';' || c != '.')
+                    if (IsLetter(c) == true)
                     {
                         return false;
                     }
@@ -183,7 +184,7 @@ namespace Software_Projekt.View
                     return false;
                 foreach (char c in TextBox4.Text)
                 {
-                    if (c != '0' || c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' || c != '8' || c != '9' || c != ',' || c != ';' || c != '.')
+                    if (IsLetter(c) == true)
                     {
                         return false;
                     }
@@ -201,6 +202,11 @@ namespace Software_Projekt.View
                 DataSeries.Add(series);
             }
             return true;
+        }
+
+        bool IsLetter(char c)
+        {
+            return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
         }
     }
 }
