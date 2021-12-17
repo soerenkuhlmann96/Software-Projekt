@@ -9,20 +9,20 @@ namespace Software_Projekt.Model
     class Calculation
     {
         /**************************************/
-        public double GeometrischesMittel(double[] array, double[] frequence)
+        public double GeometrischesMittel(double[] array)
         {
             double xBar_g = 1;
             for (var i = 0; i < array.Length; i++)
             {
                 xBar_g *= array[i];
             }
-            return Math.Pow(xBar_g, (1 / array.Length));
+            return Math.Pow(xBar_g, (1.0 / array.Length));
         }
         /**************************************/
         public double Varianz(double[] array)
         {
             var avg = array.Average();
-            double[] vari = { };
+            double[] vari = new double[array.Length];
             for (var i = 0; i < array.Length; i++)
             {
                 vari[i] = Math.Pow(array[i] - avg, 2);

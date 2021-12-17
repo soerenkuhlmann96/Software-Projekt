@@ -26,8 +26,7 @@ namespace Software_Projekt
                 {
                     Name = columns[0],
                     Formel = columns[1],
-                    Beschreibung = columns[2],
-                    Informationen = columns[3]
+                    Informationen = columns[2]
                 };
                 indicators.Add(indicator);
             }

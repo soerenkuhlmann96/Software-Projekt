@@ -1,35 +1,33 @@
-﻿Metrisch;x+1;Text1;info1
-kumulierte absolute Häufigkeitsverteilung;x+2;Text2;info2
-Relative Häufigkeitsverteilung;x+3;Text3;info3
-kumulierte relative Häufigkeitsverteilung ;x+4;Text4;info4
-Lagemaße;x+5;Text5;info5
-Median;x+6;Text6;info6
-Quantil;x+7;Text7;info7
-Arithmetisches Mittel;x+8;Text8;info8
-Geometrisches Mittel;x+9;Text9;info9
-Spannweite;x+10;Text10;info10
-Quantilsabstand;x+11;Text11;info11
-Varianz;x+12;Text12;info12
-Standardabweichung;x+13;Text13;info13
-Variationskoeffizient;x+14;Text14;info14
-Merkmalssumme;x+15;Text15;info15
-Anteilswerte;x+16;Text16;info16
-Absolutes Konzentrationsmaß;x+17;Text17;info17
-Lorenzkurve;x+18;Text18;info18
-Gini Maß;x+19;Text19;info19
-Randverteilung;x+20;Text20;info20
-Kontingenztabelle;x+21;Text21;info21
-Chi-Quadrat;x+22;Text22;info22
-Kontingenzmaß nach Cramér;x+23;Text23;info23
-Kovarianz;x+24;Text24;info24
-Pearson’scher Korrelationskoeffizient;x+25;Text25;info25
-Rangzahl;x+26;Text26;info26
-Spearman’scher Rangkorrelationskoeffizient;x+27;Text27;info27
-Einfache Lineare Regresion;x+28;Text28;info28
-Güte der Regression;x+29;Text29;info29
-Bestimmtheitsmaß;x+30;Text30;info30
-Wertindex;x+31;Text31;info31
-Preisindex nach Laspeyres;x+32;Text32;info32
-Preisindex nach Paasche;x+33;Text33;info33
-Mengenindex nach Laspeyres;x+34;Text34;info34
-Mengenindex nach Paasche;x+35;Text35;info35
+﻿Absolute Häufigkeitsverteilung von X.  ; h(χⱼ)=hⱼ;Aus der Statistik ablesen bzw. durch die Auszählung der beobachteten Ausprägungen aus der gegebenen Statistik erhält man die absolute Häufigkeitsverteilung;
+Kumulierte absolute Häufigkeitsverteilung;H(χⱼ)=Hⱼ;"Alle absoluten Häufigkeitsverteilungen werden je Zeile immer jeweils aufeinander addiert. Wenn alle absoluten Häufigkeiten der jeweiligen Ausprägungen aufeinander addiert wurden, müsste H(χₗₐₛₜ)=n mit n = Erhebungsmasse sein.""";
+Relative Häufigkeitsverteilung;ƒ(χⱼ)=ƒⱼ;h(χⱼ)/n | d.h die absoluten Häufigkeitsverteilungen werden durch die Erhebungsmasse geteilt. Aus diesem Grund nennt man diese auch relative Häufigkeitsverteilung: Es sind die absoluten Verteilungen in Relation zur Erhebungsmasse / untersuchten Masse.;
+Kumulierte relative Häufigkeitsverteilung;Ƒ(χⱼ)=Ƒⱼ;H(χⱼ)/n | d.h die absoluten Häufigkeitsverteilungen werden durch die Erhebungsmasse geteilt. Aus diesem Grund nennt man diese auch kumulierte, relative Häufigkeitsverteilung: Es sind die absoluten Verteilungen in Relation zur Erhebungsmasse / untersuchten Masse.;
+empirische Verteilungsfunktion (Einzeldaten);[empVerteilung_Z];Die empirische Verteilungsfunktion gibt an mit wieviel Prozent der beobachteten Menge kleiner oder gleich einem gewissen Wert ist: Wenn der gewisse Wert [empVerteilung_M];
+Approximative empirische Verteilungsfunktion (klassierte Daten);[appempVerteilung_Z];Auch die approximative Verteilungsfunktion hat dieselbe Aufgabe wie die empirische Verteilungsfunktion bei den Einzeldaten: Wieviel Prozent der beobachteten Menge ist kleiner oder gleich einem gewissen Wert.| Hinweis: Approximiert = angenähert, also berechnet. Eine angenäherte Verteilungsfunktion ist nur bei klassierten Daten notwendig. Approximierte Verteilungsfunktion = klassierte Grundstatistik.| Bei klassierten Daten ist die Methodik etwas anders, denn im Gegensatz zur empirischen Verteilungsfunktion bei Einzeldaten, kann die Approximierte ggf. nicht abgelesen werden. Sie muss berechnet werden. Hierzu wie folgt vorangehen: [appempVerteilung_M];
+Modus;x̅ᴅ;x̅ᴅ heißt Modus, wenn ƒ(χ) für x̅ᴅ maximal wird. In anderen Worten heißt das, der Modus befindet sich dort, wo die relative Häufigkeitsverteilung am größten ist. Alternativ kann man diese auch über h(χ) ablesen. In beiden Fällen wird der Modus an der korrekten Stelle angezeigt. Der Modus gibt einen Wert (die größte Ausprägung) aus.;
+Modus(modale Klasse);x̅ᴅ;Methodik und Definition sind analog zum Modus für Einzeldaten.;
+Median;x̅ƶ;x̅ƶ=min{χⱼ|F(χⱼ)≥0,5} | d.h. der Median ist die kleinste Merkmalsausprägung, die von min. 50% aller Merkmalswerte nicht überschritten wird. Die Ermittlung kann durch reine Beobachtung der gegebenen Statistik sein, bei dem Merkmal bei dem F(x) ≥ 0,5 erreicht, befindet sich der Median. Der Median kann auch berechnet werden (Einzeldaten). Voraussetzung hierfür ist,dass die Merkmalsausprägungen in eine geordnete Reihenfolge gebracht werden. Erst dann kann der Median mit folgender Gleichung berechnet werden: [Median_M];
+Median(approximativ berechneter Median);x̅ƶ;x̅ƶ=min{χⱼ|F(χⱼ)≥0,5} | Hier wird die approximative Verteilungsfunktion angewendet, mit x = 0,5. Siehe dazu „approximative Verteilungsfunktion (klassierte Daten)“ ansehen. [appMedian_M];
+Quantile;x̅α;x̅α ist die kleineste Merkmalsausprägung bei der χⱼ mit F(χⱼ) ≥ α wobei 0 < α < 1 . Das 0,5 Quantil bildet den Median. Quantile werden je nach dem welchen Wert sie bilden auch anders benannt: [Quantile_M];
+Arithmetisches Mittel(Einzeldaten);χ̅;[einzelarithMittel_M];
+Arithmetisches Mittel(klassierte Daten);χ̅,;Liegt eine klassierte Statistik mit Häufigkeiten vor, weil beispielsweise die tatsächlichen Einzeldaten nicht vorgegeben oder unbekannt sind, kann das arithmetische Mittel nur approximativ, also näherungsweise ermittelt werden. Hierfür verwendet man für  χᵢ die jeweilige Klassenmitte. Berechnung analog zu zum „gewichteten arithmetischen Mittel für Einzeldaten“. Das arithmetische Mittel ist der Durchschnittswert der beobachteten Statistik.;
+Geometrisches Mittel;x̅ɢ;Findet Anwendung bei relativen Änderungen über einen beobachteten Zeitraum, also bei Wachstumsraten. Eine notwendige Bedingung für die Verwendung vom geometrischen Mittel ist die Tatsache, dass die gegebene Statistik verhältnisskaliert mit positiven Merkmalsausprägungen aufweisen muss. [geoMittel_M];
+Spannweite(Einzeldaten);ѡ;Die Spannweite liefert die Entfernung zwischen der kleinsten und der größten Merkmalsausprägung der beobachteten Statistik. Sie ist sehr ausreißerempfindlich und wird daher auch meist nur dafür eingesetzt, um Hinweise auf Ausreißer zu erhalten.| ѡ = max{χₗ + χ₂ +...+ χₙ} - min{χₗ + χ₂ +...+ χₙ} |;
+Quartilsabstand;q̅;Quartilsabstand ist eine genormte Definition und meint die Spannweite der zentrierten 50% der beobachteten Merkmalsausprägungen. |q̅ = χ̅₀,₇₅ - χ̅₀,₂₅ |;
+Varianz;s²;[Varianz_M];
+Standardabweichung;s;Wurzel aus s² ziehen.;
+Variationskoeffizient;v;|v = s/χ̅ | Der Variationskoeffizient nur in folgenden Fällen anwenden, um eine sinnvolle Interpretation zu ermöglichen: 1. bei ausschließlich positiven Werten, 2. beim Vergleich von Messreihen verschiedener Dimensionen, 3. beim Vergleich der Streuungen von Verteilungen mit verschiedenen Mittelwerten ;
+Konzentrationsrate (Absolutes Konzentrationsmaß) (Einzeldaten);CRₘ;|CRₘ = gₙ + gₙ-₁ + gₙ₋₂ ... gₙ₋ₘ₊₁ | Die Konzentrationsrate auch bekannt als absolutes Konzentrationsmaß gibt an, welcher Anteil der Merkmalssumme auf die m größten Merkmalswerte entfällt. Um CRₘ anwenden zu können, müssen folgende Bedingungen erfüllt sein: 1.;Nicht negative Merkmalsausprägungen 2. Die Merkmalswerte bzw. die Klassenmitten sind absteigend nach ihrer Größe sortiert bzw. sollten sortiert werden. [Konzentrationsmasse_M]
+Konzentrationsrate (Absolutes Konzentrationsmaß) (klassierte Daten);CRₘ;|CRₘ = gₙ + gₙ-₁ + gₙ₋₂ ... gₙ₋ₘ₊₁ | Die Konzentrationsrate auch bekannt als absolutes Konzentrationsmaß gibt an, welcher Anteil der Merkmalssumme auf die m größten Merkmalswerte entfällt. Um CRₘ anwenden zu können, müssen folgende Bedingungen erfüllt sein: 1.;Nicht negative Merkmalsausprägungen 2. Die Merkmalswerte bzw. die Klassenmitten sind absteigend nach ihrer Größe sortiert bzw. sollten sortiert werden. [klassierteKonzentrationsmasse_M]
+Lorenzkurve (Relative Konzentrationsmessung);keine;Um die Lorenzkurve zu erstellen, bedarf es drei Kennzahlen aus der Konzentrationsrate CRₘ : G(χ), F(χ), ƒ(χ) . Es wird ein Koordinatensystem erstellt bei dem die Abszisse F(χ) repräsentiert und die Ordinate durch G(χ). Die Koordinaten (0,0) und (1,1) werden durch eine gerade Linie verbunden. Dies ist die Winkelhalbierende. Danach werden alle F(χ) eingezeichnet. Sie werden durch gerade Linien von Punkt zu Punkt verbunden. Die Lorenzkurve befindet sich stets unter der Winkelhalbierenden. Liegt jedoch keine Konzentration vor, entspricht die Lorenzkurve der Winkelhalbierenden. Allerdings, je mehr die Lorenzkurve von der Winkelhalbierenden abweicht desto stärker die Konzentration.;
+Gini-Maß (Relatives Konzentrationsmaß);Mɢ;Das Gini-Maß ist die normierte Fläche zwischen Lorenzkurve und der Winkelhalbierenden. Um das Gini-Maß zu berechnen, bedarf es drei Kennzahlen aus der Konzentrationsrate CRₘ : G(χ), F(χ), ƒ(χ). [GiniMass_M];
+Rangkorrelationskoeffizient;rₛ;[Rangkorrkoeffizient_M1]  1. Ränge bilden. Dazu zunächst die Merkmalsausprägungen ordinale Natur so stehen lassen wie sie gegeben sind. Im Anschluss Ränge bilden. Liegen Bindungen vor, dann wird den entsprechenden Merkmalsausprägungen das arithmetische Mittel als Rangzahl zugeordnet. 2. Anhand der eben ermittelten Ränge die benötigten Kennzahlen bilden. Notwendige Kennzahlen: [Rangkorrkoeffizient_M2]. Der (Spearman’sche) Rangkorrelationskoeffizient misst den linearen Zusammenhang  zwischen den Rangzahlen. Dies entspricht den monotonen Zusammenhang zwischen den Merkmalen. Der Wert gibt dabei die Stärke, die Richtung und die Art des Zusammenhangs an: -1 ≤ rₛ ≤ 1. Die Richtung - Das Vorzeichen gibt die Richtung an: Minus=Fallend, Plus=Steigend | Die Art - ist grundsätzlich: monoton | Die Stärke - wird durch die Ziffer angegeben: wobei 0 = kein Zusammenhang;
+Kovarianz;Cov(X,Y);Die Kovarianz ist eine Kennzahl, die anzeigt, ob zwischen zwei metrischen Merkmalen ein positiver oder negativer linearer Zusammenhang besteht. [Kovarianz_M] |Hinweis : Im Grunde werden hier die Teilergebnisse einfach nur anhand der entsprechenden Häufigkeitsverteilungen gewichtet. [Kovarianz_M_Einfach] Interpretation : -∞ ≤ Cov(X,Y) ≤ ∞, Ist das Vorzeichen positiv = es liegt ein gleichsinniger Zusammenhang vor, Ist das Vorzeichen negativ = es liegt ein gegensinniger Zusammenhang vor.  Cov(X,Y) ≠ 0, dann sind beide Merkmale empirisch abhängig. d.h. bei der Kovarianz ist es sekundär, wie groß der errechnete Wert ist. Je größer der Wert desto stärker der entsprechende Zusammenhang, der durch das Vorzeichen definiert wird. Die Ausnahme bildet hier der Wert von 0.;
+Korrelationskoeffizient;rᵪᵧ;Weil die Kovarianz als Zusammenhangsmaß für metrische Merkmale mit einem Gültigkeitsbereich von -∞ bis hin zu +∞ denkbar ungünstig ist, ergänzt bzw. baut der (Pearson’sche) Korrelationskoeffizient auf die Kovarianz auf.| Hinweis: Es berechnet sich exakt wie der Spearman’sche Rangkorrelationskoeffizient, allerdings werden die Werte nicht anhand der Ränge gebildet.| [KorrelationsKoeffizient_M] ;
+Regressionskoeffizient (einer linearen KQ-Funktion);ŷ;[Regkoeffizient_M] 1. Zuerst b berechnen. 2. Im Anschluss a mithilfe von b berechnen 3. Beide Kennzahlen in ŷ zusammenführen. Hinweis: Die obige Formel setzt voraus, dass Y die abhängige Variable (Regressand bzw. Zielvariable) ist und X die unabhängige Variable (Regressor bzw. Einflussvariable) ist. Sollte es genau andersherum sein, die Formel entsprechend umändern. b = gibt die Steigung der Geraden an , a = gibt Wert der Abszisse wieder;
+Bestimmtheitsmaß;B²;[Bestimmtheitsmass_M1] Die Methodik ist genauso wie der Spearman’sche Korrelationskoeffizient. Dieser wird dann lediglich quadriert. Der Wert der sich dadurch ergibt ist als Prozentwert zu deuten. Das Bestimmtheitsmaß gibt die Güte der linearen Regression wieder. Interpretation : (keine lineare Abhängigkeit) 0 ≤ B² ≤ 1 (perfekter linearer Zusammenhang). Antwortsatz: „Der Anteil, der durch die Regression erklärten Varianz an der Gesamtvarianz beträgt B²%.“ [Bestimmtheitsmass_M2];
+Wertindex;W₀,ₜ;[Werti_M] Hinweis: Um nur die Preisentwicklung zu erhalten, wird wahlweise die Menge in der Basis- oder Berichtsperiode konstant gehalten. Um nur die Mengenentwicklung zu erhalten, wird wahlweise der Preis in der Basis- oder Berichtsperiode konstant gehalten.;
+Preisindex nach Lespreyes;Pᴸ₀,ₜ;[PreisiLespreyes_M] Der Preisindex nach Lespreyes beschreibt die durchschnittliche Preisveränderung bei Konstanthaltung des Warenkorbs der Basisperiode. Merke: Lespreyes = Basisperiode;
+Preisindex nach Paasche;Pᴾ₀,ₜ;[PreisiPaasche_M] Der Preisindex nach Paasche beschreibt die durchschnittliche Preisveränderung bei Konstanthaltung des Warenkorbs der Berichtsperiode. Merke: Paasche = Basisperiode;
+Mengenindex nach Lespreyes;Qᴸ₀,ₜ;[MengeniLespreyes_M] Der Mengenindex nach Lespreyes beschreibt die durchschnittliche Mengenveränderung bei Konstanthaltung der Preise in der Basisperiode. Merke: Lespreyes = Basisperiode;
+Preisindex nach Paasche;Qᴾ₀,ₜ;[MengeniPaasche_M] Der Mengenindex nach Paasche beschreibt die durchschnittliche Mengenveränderung bei Konstanthaltung der Preise in der Berichtsperiode. Merke: Paasche = Berichtsperiode;

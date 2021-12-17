@@ -39,12 +39,59 @@ namespace Software_Projekt.View
         //öffnet nächste Seite (IndicatorSelectionPage) und Speichert die Datenbeschreibung in der App.xaml.cs
         private void OnClickContinue(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
-            if (ComboboxScaleType.Text == "Metrisch")
-                (App.Current as App).MetricScaletype = MetricScaleType;
-            (App.Current as App).Skalentyp = ComboboxScaleType.Text;
-            SaveDescription();
-            (App.Current as App).description = description;
+            if (amount > 2)
+            {
+                if (amount == 3)
+                {
+                    if (ComboBox2.SelectedIndex == 0 && ComboBox3.SelectedIndex == 0)
+                    {
+                        MessageBox.Show("Bitte geben Sie bei einer Zahlenreihe \"Absolute Häufigkeit\" an.");
+                    }
+                    else if (ComboBox2.SelectedIndex == 1 && ComboBox3.SelectedIndex == 1)
+                    {
+                        MessageBox.Show("Bitte geben Sie bei zwei Zahlenreihen \"Zahlenreihe\" an.");
+                    }
+                    else
+                    {
+                        this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
+                        if (ComboboxScaleType.Text == "Metrisch")
+                            (App.Current as App).MetricScaletype = MetricScaleType;
+                        (App.Current as App).Skalentyp = ComboboxScaleType.Text;
+                        SaveDescription();
+                        (App.Current as App).description = description;
+                    }
+                }
+                else
+                {
+                    if (ComboBox2.SelectedIndex == 0 && ComboBox3.SelectedIndex == 0)
+                    {
+                        MessageBox.Show("Bitte geben Sie bei Zahlenreihe 2 \"Absolute Häufigkeit\" an.");
+                    }
+                    else if (ComboBox2.SelectedIndex == 1 && ComboBox3.SelectedIndex == 1)
+                    {
+                        MessageBox.Show("Bitte geben Sie bei Zahlenreihen 3 \"Zahlenreihe\" an.");
+                    }
+                    else
+                    {
+                        this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
+                        if (ComboboxScaleType.Text == "Metrisch")
+                            (App.Current as App).MetricScaletype = MetricScaleType;
+                        (App.Current as App).Skalentyp = ComboboxScaleType.Text;
+                        SaveDescription();
+                        (App.Current as App).description = description;
+                    }
+                }
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("/View/IndicatorSelectionPage.xaml", UriKind.Relative));
+                if (ComboboxScaleType.Text == "Metrisch")
+                    (App.Current as App).MetricScaletype = MetricScaleType;
+                (App.Current as App).Skalentyp = ComboboxScaleType.Text;
+                SaveDescription();
+                (App.Current as App).description = description;
+            }
+
         }
 
         //Öffnet vorherige Seite (DataPage)

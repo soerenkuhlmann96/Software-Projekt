@@ -1,35 +1,8 @@
-﻿ordinal;x+1;Text1;info1
-kumulierte absolute Häufigkeitsverteilung;x+2;Text2;info2
-Relative Häufigkeitsverteilung;x+3;Text3;info3
-kumulierte relative Häufigkeitsverteilung ;x+4;Text4;info4
-Lagemaße;x+5;Text5;info5
-Median;x+6;Text6;info6
-Quantil;x+7;Text7;info7
-Arithmetisches Mittel;x+8;Text8;info8
-Geometrisches Mittel;x+9;Text9;info9
-Spannweite;x+10;Text10;info10
-Quantilsabstand;x+11;Text11;info11
-Varianz;x+12;Text12;info12
-Standardabweichung;x+13;Text13;info13
-Variationskoeffizient;x+14;Text14;info14
-Merkmalssumme;x+15;Text15;info15
-Anteilswerte;x+16;Text16;info16
-Absolutes Konzentrationsmaß;x+17;Text17;info17
-Lorenzkurve;x+18;Text18;info18
-Gini Maß;x+19;Text19;info19
-Randverteilung;x+20;Text20;info20
-Kontingenztabelle;x+21;Text21;info21
-Chi-Quadrat;x+22;Text22;info22
-Kontingenzmaß nach Cramér;x+23;Text23;info23
-Kovarianz;x+24;Text24;info24
-Pearson’scher Korrelationskoeffizient;x+25;Text25;info25
-Rangzahl;x+26;Text26;info26
-Spearman’scher Rangkorrelationskoeffizient;x+27;Text27;info27
-Einfache Lineare Regresion;x+28;Text28;info28
-Güte der Regression;x+29;Text29;info29
-Bestimmtheitsmaß;x+30;Text30;info30
-Wertindex;x+31;Text31;info31
-Preisindex nach Laspeyres;x+32;Text32;info32
-Preisindex nach Paasche;x+33;Text33;info33
-Mengenindex nach Laspeyres;x+34;Text34;info34
-Mengenindex nach Paasche;x+35;Text35;info35
+﻿Absolute Häufigkeitsverteilung von X.  ; h(χⱼ)=hⱼ;Aus der Statistik ablesen bzw. durch die Auszählung der beobachteten Ausprägungen aus der gegebenen Statistik erhält man die absolute Häufigkeitsverteilung
+Kumulierte absolute Häufigkeitsverteilung;H(χⱼ)=Hⱼ;"Alle absoluten Häufigkeitsverteilungen werden je Zeile immer jeweils aufeinander addiert. Wenn alle absoluten Häufigkeiten der jeweiligen Ausprägungen aufeinander addiert wurden, müsste H(χₗₐₛₜ)=n mit n = Erhebungsmasse sein."""
+Relative Häufigkeitsverteilung;ƒ(χⱼ)=ƒⱼ;h(χⱼ)/n | d.h die absoluten Häufigkeitsverteilungen werden durch die Erhebungsmasse geteilt. Aus diesem Grund nennt man diese auch relative Häufigkeitsverteilung: Es sind die absoluten Verteilungen in Relation zur Erhebungsmasse / untersuchten Masse.
+Kumulierte relative Häufigkeitsverteilung;Ƒ(χⱼ)=Ƒⱼ;H(χⱼ)/n | d.h die absoluten Häufigkeitsverteilungen werden durch die Erhebungsmasse geteilt. Aus diesem Grund nennt man diese auch kumulierte, relative Häufigkeitsverteilung: Es sind die absoluten Verteilungen in Relation zur Erhebungsmasse / untersuchten Masse.
+Modus;x̅ᴅ;x̅ᴅ heißt Modus, wenn ƒ(χ) für x̅ᴅ maximal wird. In anderen Worten heißt das, der Modus befindet sich dort, wo die relative Häufigkeitsverteilung am größten ist. Alternativ kann man diese auch über h(χ) ablesen. In beiden Fällen wird der Modus an der korrekten Stelle angezeigt. Der Modus gibt einen Wert (die größte Ausprägung) aus.
+Median;x̅ƶ;x̅ƶ=min{χⱼ|F(χⱼ)≥0,5} | d.h. der Median ist die kleinste Merkmalsausprägung, die von min. 50% aller Merkmalswerte nicht überschritten wird. Die Ermittlung kann durch reine Beobachtung der gegebenen Statistik sein, bei dem Merkmal bei dem F(x) ≥ 0,5 erreicht, befindet sich der Median. Der Median kann auch berechnet werden (Einzeldaten). Voraussetzung hierfür ist,dass die Merkmalsausprägungen in eine geordnete Reihenfolge gebracht werden. Erst dann kann der Median mit folgender Gleichung berechnet werden: [Median_M]
+Quantile;x̅α;x̅α ist die kleineste Merkmalsausprägung bei der χⱼ mit F(χⱼ) ≥ α wobei 0 < α < 1 . Das 0,5 Quantil bildet den Median. Quantile werden je nach dem welchen Wert sie bilden auch anders benannt: [Quantile_M]
+Rangkorrelationskoeffizient;rₛ;[Rangkorrkoeffizient_M1]  1. Ränge bilden. Dazu zunächst die Merkmalsausprägungen ordinale Natur so stehen lassen wie sie gegeben sind. Im Anschluss Ränge bilden. Liegen Bindungen vor, dann wird den entsprechenden Merkmalsausprägungen das arithmetische Mittel als Rangzahl zugeordnet. 2. Anhand der eben ermittelten Ränge die benötigten Kennzahlen bilden. Notwendige Kennzahlen: [Rangkorrkoeffizient_M2]. Der (Spearman’sche) Rangkorrelationskoeffizient misst den linearen Zusammenhang  zwischen den Rangzahlen. Dies entspricht den monotonen Zusammenhang zwischen den Merkmalen. Der Wert gibt dabei die Stärke, die Richtung und die Art des Zusammenhangs an: -1 ≤ rₛ ≤ 1. Die Richtung - Das Vorzeichen gibt die Richtung an: Minus=Fallend, Plus=Steigend | Die Art - ist grundsätzlich: monoton | Die Stärke - wird durch die Ziffer angegeben: wobei 0 = kein Zusammenhang

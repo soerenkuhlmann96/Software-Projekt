@@ -25,7 +25,7 @@ namespace Software_Projekt.ViewModel
 
             if (DataSeries.Count == 2)
                 r2 = DataSeries[1];
-            
+
             else if (DataSeries.Count == 3)
             {
                 r2 = DataSeries[1];
@@ -65,17 +65,13 @@ namespace Software_Projekt.ViewModel
                     }
                     //reihe2 sotieren und beschreibung kriegen
                     temp = Sorter(r2, absolutreihe2);
-                    normalizedList[3] = temp[0];
-                    normalizedList[4] = temp[1];
-                    normalizedList[5] = temp[2];
+                    normalizedList.Add(temp[0]);
                 }
                 else if (description[1] != null)
                 {
                     //reihe2 sotieren und beschreibung kriegen für r2
                     temp = Sorter(r2, r3);
-                    normalizedList[3] = temp[0];
-                    normalizedList[4] = temp[1];
-                    normalizedList[5] = temp[2];
+                    normalizedList.Add(temp[0]);
                 }
             }
             else
@@ -93,17 +89,13 @@ namespace Software_Projekt.ViewModel
                     }
                     //reihe2 sotieren und beschreibung kriegen
                     temp = Sorter(r3, absolutreihe2);
-                    normalizedList[3] = temp[0];
-                    normalizedList[4] = temp[1];
-                    normalizedList[5] = temp[2];
+                    normalizedList.Add(temp[0]);
                 }
                 else if (description[3] != null)
                 {
                     //reihe2 sotieren und beschreibung kriegen für r3
                     temp = Sorter(r3, r4);
-                    normalizedList[3] = temp[0];
-                    normalizedList[4] = temp[1];
-                    normalizedList[5] = temp[2];
+                    normalizedList.Add(temp[0]);
                 }
             }
 
@@ -216,8 +208,21 @@ namespace Software_Projekt.ViewModel
                 zähler++;
             }
 
-            var returner = new List<double[]> { nrsort, nrdessort, nrrela };
 
+            int anzahl = Convert.ToInt32(summe);
+            double[] finish = new double[anzahl];
+            int fortschritt = 0;
+            for (int i = 0; i < nrsort.Length; i++)
+            {
+
+                for (int j = 0; j < nrdessort[i]; j++)
+                {
+                    finish[fortschritt + j] = nrsort[i];
+                }
+                fortschritt = fortschritt + Convert.ToInt32(nrdessort[i]);
+            }
+            //retrun finish
+            var returner = new List<double[]> { finish };
             return returner;
         }
     }

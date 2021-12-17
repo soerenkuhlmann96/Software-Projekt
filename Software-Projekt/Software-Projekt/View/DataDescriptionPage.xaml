@@ -47,31 +47,31 @@
             <Button Content="Hilfe" Margin="0,20,0,0" Width="100" Click="OnClickHelp"/>
             
             <StackPanel Margin="0,40,0,0">
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Label Content="Erste Zahlenreihe"/>
                     <ComboBox SelectedIndex="0"  Width="175" Margin="10,0,0,0"  x:Name="ComboBox1">
                         <ComboBoxItem Content="Zahlenreihe" ToolTip="Die erste Eingabe muss immer eine Zahlenreihe sein"/>
                     </ComboBox>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox2" Visibility="Collapsed">
-                    <Label Content="Erste Zahlenreihe"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox2" Visibility="Collapsed" HorizontalAlignment="Right">
+                    <Label Content="Zweite Zahlenreihe"/>
                     <ComboBox SelectedIndex="0"  Width="175" Margin="10,0,0,0"  x:Name="ComboBox2">
                         <ComboBoxItem Content="Zahlenreihe"/>
                         <ComboBoxItem Content="Absolute Häufigkeitsreihe"/>
                     </ComboBox>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox3" Visibility="Collapsed">
-                    <Label Content="Erste Zahlenreihe"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox3" Visibility="Collapsed" HorizontalAlignment="Right">
+                    <Label Content="Dritte Zahlenreihe"/>
                     <ComboBox SelectedIndex="0"  Width="175" Margin="10,0,0,0"  x:Name="ComboBox3">
                         <ComboBoxItem Content="Zahlenreihe"/>
                         <ComboBoxItem Content="Absolute Häufigkeitsreihe"/>
                     </ComboBox>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox4" Visibility="Collapsed">
-                    <Label Content="Erste Zahlenreihe"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" x:Name="StackPanelCombobox4" Visibility="Collapsed" HorizontalAlignment="Right">
+                    <Label Content="Vierte Zahlenreihe"/>
                     <ComboBox SelectedIndex="0" Width="175" Margin="10,0,0,0" x:Name="ComboBox4">
                         <ComboBoxItem Content="Absolute Häufigkeitsreihe" ToolTip="Bei vier Eingaben müssen zwei Häufigkeitsreihen vorhanden sein"/>
                     </ComboBox>

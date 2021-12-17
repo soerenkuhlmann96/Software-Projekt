@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Software_Projekt</RootNamespace>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>statistik-Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

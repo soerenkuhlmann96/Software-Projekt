@@ -14,18 +14,12 @@ namespace Software_Projekt.View
     public partial class IndicatorsPopup : Window, INotifyPropertyChanged
     {
         private string indicatorName;
-        private string indicatorRequirements;
         private string indicatorCalculations;
         private string indicatorInfo;
         public string IndicatorName
         {
             get => indicatorName;
             set => OnPropertyChanged<string>(ref indicatorName, value);
-        }
-        public string IndicatorRequirements
-        {
-            get => indicatorRequirements;
-            set => OnPropertyChanged<string>(ref indicatorRequirements, value);
         }
         public string IndicatorCalculations
         {
@@ -44,7 +38,6 @@ namespace Software_Projekt.View
             InitializeComponent();
 
             IndicatorName = info.IndicatorName;
-            IndicatorRequirements = info.IndicatorRequirements;
             IndicatorCalculations = info.IndicatorCalculations;
             IndicatorInfo = info.IndicatorsInfo;
         }
